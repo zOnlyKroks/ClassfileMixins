@@ -2,6 +2,8 @@ package de.zonlykroks.compiler.lookhere;
 
 public interface DummyInterface {
 
-    void dontDoShit();
+    default void dontDoShit() {
+        System.out.println("I'm not doing anything");
+    }
 
 }

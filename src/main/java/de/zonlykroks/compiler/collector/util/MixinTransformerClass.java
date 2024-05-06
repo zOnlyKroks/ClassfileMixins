@@ -2,8 +2,10 @@ package de.zonlykroks.compiler.collector.util;
 
 import de.zonlykroks.compiler.Bootstrap;
 import de.zonlykroks.compiler.collector.annotations.Mixin;
+import de.zonlykroks.compiler.collector.annotations.modifiers.AnnotationAdder;
 import de.zonlykroks.compiler.collector.annotations.modifiers.AnnotationDropper;
 import de.zonlykroks.compiler.collector.annotations.modifiers.InterfaceInjector;
+import de.zonlykroks.compiler.collector.injectors.AnnotationAdderProcessor;
 import de.zonlykroks.compiler.collector.injectors.AnnotationDropperProcessor;
 import de.zonlykroks.compiler.collector.injectors.InterfaceInjectorProcessor;
 import org.glavo.classfile.*;
@@ -44,7 +46,7 @@ public class MixinTransformerClass {
         }
     }
 
-    private void performTopLevelModifications() throws Exception {
+    private void performTopLevelModifications() {
         Annotation[] annotations = this.clazz.getAnnotations();
 
         for (Annotation annotation : annotations) {
@@ -52,6 +54,8 @@ public class MixinTransformerClass {
                 this.targetModel = InterfaceInjectorProcessor.handleInterfaceInjection(clazz,this.targetPath,this.targetModel);
             }else if(annotation instanceof AnnotationDropper) {
                 this.targetModel = AnnotationDropperProcessor.handleAnnotationDrop(clazz,this.targetPath,this.targetModel);
+            }else if(annotation instanceof AnnotationAdder) {
+                this.targetModel = AnnotationAdderProcessor.handleAnnotationAdd(clazz,this.targetPath,this.targetModel);
             }
         }
     }
