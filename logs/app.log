@@ -1541,3 +1541,258 @@
 18:58:44.797 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
 18:58:44.798 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
 18:58:44.798 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:02:08.612 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:02:08.640 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:02:08.641 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:02:08.641 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:02:08.648 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:02:08.649 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:02:08.649 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:02:44.125 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:02:44.152 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:02:44.153 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:02:44.153 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:02:44.158 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:02:44.159 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:02:51.663 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:02:51.693 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:02:51.694 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:02:51.694 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:02:51.700 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:02:51.701 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:02:51.702 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:04:33.980 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:04:34.009 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:04:34.010 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:04:34.011 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:04:34.016 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:04:34.016 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:04:34.017 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:04:51.524 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:04:51.554 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:04:51.554 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:04:51.555 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:04:51.560 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:04:51.561 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:04:51.562 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:09:40.046 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:09:40.076 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:09:40.077 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:09:40.078 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:09:40.084 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:09:40.085 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:09:40.086 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:14:34.969 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:14:34.999 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:14:34.999 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:14:35.000 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:14:35.005 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:14:35.006 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:14:35.007 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:16:01.859 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:16:01.889 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:16:01.890 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:16:01.890 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:16:01.896 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:16:01.922 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:16:01.922 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:16:01.925 [main] INFO  ClassfileMixin - Interface: 7 de/zonlykroks/compiler/lookhere/DummyInterface
+19:16:58.954 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:16:58.985 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:16:58.985 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:16:58.986 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:16:58.991 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:16:59.017 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:16:59.019 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:16:59.021 [main] INFO  ClassfileMixin - Interface: 7 de/zonlykroks/compiler/lookhere/DummyInterface
+19:17:05.414 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:17:05.440 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:17:05.440 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:17:05.441 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:17:05.446 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:17:05.471 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:17:05.472 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:17:05.475 [main] INFO  ClassfileMixin - Interface: 7 de/zonlykroks/compiler/lookhere/DummyInterface
+19:17:11.759 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:17:11.787 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:17:11.789 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:17:11.789 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:17:11.794 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:17:11.820 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:17:11.820 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:17:11.823 [main] INFO  ClassfileMixin - Interface: 7 de/zonlykroks/compiler/lookhere/DummyInterface
+19:17:14.924 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:17:14.954 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:17:14.954 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:17:14.955 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:17:14.961 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:17:14.987 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:17:14.987 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:17:14.990 [main] INFO  ClassfileMixin - Interface: 7 de/zonlykroks/compiler/lookhere/DummyInterface
+19:20:41.271 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:20:41.299 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:20:41.299 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:20:41.300 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:20:41.305 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:20:41.331 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:20:41.331 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:20:41.334 [main] INFO  ClassfileMixin - Interface: 7 de/zonlykroks/compiler/lookhere/DummyInterface
+19:20:41.378 [main] INFO  ClassfileMixin - Merged all interface methods!
+19:20:41.378 [main] INFO  ClassfileMixin - Method: <init>
+19:20:41.379 [main] INFO  ClassfileMixin - Method: dontDoShit
+19:21:10.394 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:21:10.420 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:21:10.421 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:21:10.421 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:21:10.426 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:21:10.452 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:21:18.356 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:21:18.386 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:21:18.387 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:21:18.387 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:21:18.394 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:21:18.420 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:21:18.420 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:21:18.423 [main] INFO  ClassfileMixin - Interface: 7 de/zonlykroks/compiler/lookhere/DummyInterface
+19:21:18.467 [main] INFO  ClassfileMixin - Merged all interface methods!
+19:21:18.467 [main] INFO  ClassfileMixin - Method: <init>
+19:21:18.469 [main] INFO  ClassfileMixin - Method: dontDoShit
+19:22:14.887 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:22:14.918 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:22:14.919 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:22:14.919 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:22:14.925 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:22:14.951 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:22:21.900 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:22:21.926 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:22:21.926 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:22:21.927 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:22:21.932 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:22:21.958 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:22:21.959 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:22:21.962 [main] INFO  ClassfileMixin - Interface: 7 de/zonlykroks/compiler/lookhere/DummyInterface
+19:22:22.004 [main] INFO  ClassfileMixin - Merged all interface methods!
+19:22:22.004 [main] INFO  ClassfileMixin - Method: <init>
+19:22:22.005 [main] INFO  ClassfileMixin - Method: dontDoShit
+19:22:46.129 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:22:46.163 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:22:46.164 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:22:46.164 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:22:46.170 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:22:46.197 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:22:46.197 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:22:46.200 [main] INFO  ClassfileMixin - Interface: 7 de/zonlykroks/compiler/lookhere/DummyInterface
+19:22:46.245 [main] INFO  ClassfileMixin - Merged all interface methods!
+19:22:46.245 [main] INFO  ClassfileMixin - Method: <init>
+19:22:46.246 [main] INFO  ClassfileMixin - Method: dontDoShit
+19:23:08.609 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:23:08.640 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:23:08.641 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:23:08.641 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:23:08.647 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:23:08.673 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:23:08.674 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:23:08.676 [main] INFO  ClassfileMixin - Interface: 7 de/zonlykroks/compiler/lookhere/DummyInterface
+19:23:08.722 [main] INFO  ClassfileMixin - Merged all interface methods!
+19:23:08.722 [main] INFO  ClassfileMixin - Method: <init>
+19:23:08.723 [main] INFO  ClassfileMixin - Method: dontDoShit
+19:23:45.962 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:23:45.987 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:23:45.987 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:23:45.988 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:23:45.993 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:23:46.019 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:23:46.020 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:23:46.023 [main] INFO  ClassfileMixin - Interface: 7 de/zonlykroks/compiler/lookhere/DummyInterface
+19:23:46.065 [main] INFO  ClassfileMixin - Merged all interface methods!
+19:23:46.065 [main] INFO  ClassfileMixin - Method: <init>
+19:23:46.067 [main] INFO  ClassfileMixin - Method: dontDoShit
+19:24:02.886 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:24:02.920 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:24:02.921 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:24:02.921 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:24:02.927 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:24:02.952 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:24:02.953 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:24:02.956 [main] INFO  ClassfileMixin - Interface: 7 de/zonlykroks/compiler/lookhere/DummyInterface
+19:24:03.003 [main] INFO  ClassfileMixin - Merged all interface methods!
+19:24:03.003 [main] INFO  ClassfileMixin - Method: <init>
+19:24:03.004 [main] INFO  ClassfileMixin - Method: dontDoShit
+19:25:16.854 [main] INFO  ClassfileMixin - Parsing mixin configuration file: src\main\resources\example_mixin_conf.json5
+19:25:16.883 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, content is: 
+{
+  "package" : "de/zonlykroks/compiler/lookhere/"
+}
+19:25:16.884 [main] INFO  ClassfileMixin - Parsed mixin configuration file: src\main\resources\example_mixin_conf.json5, scanDir is: de/zonlykroks/compiler/lookhere/
+19:25:16.885 [main] INFO  ClassfileMixin - Scanning path: src/main/java/de/zonlykroks/compiler/lookhere/
+19:25:16.890 [main] INFO  ClassfileMixin - Found mixin transformer class: de.zonlykroks.compiler.lookhere.HelloMixin
+19:25:16.916 [main] INFO  ClassfileMixin - Found mixin transformer target class: de.zonlykroks.compiler.lookhere.TransformMe
+19:25:16.917 [main] INFO  ClassfileMixin - Full path of the target class file: C:\Users\finnr\IdeaProjects\ClassfileMixins\build\classes\java\main\de\zonlykroks\compiler\lookhere\TransformMe.class
+19:25:16.921 [main] INFO  ClassfileMixin - Interface: 7 de/zonlykroks/compiler/lookhere/DummyInterface
+19:25:16.964 [main] INFO  ClassfileMixin - Merged all interface methods!
+19:25:16.964 [main] INFO  ClassfileMixin - Method: <init>
+19:25:16.965 [main] INFO  ClassfileMixin - Method: dontDoShit
+19:25:16.966 [main] INFO  ClassfileMixin - Method: yikes

@@ -9,5 +9,14 @@ import de.zonlykroks.compiler.collector.annotations.modifiers.InterfaceInjector;
 @InterfaceInjector(interfaceDescriptor = "de.zonlykroks.compiler.lookhere.DummyInterface")
 @AnnotationDropper
 @AnnotationAdder(annotationDescriptions = {"de.zonlykroks.compiler.lookhere.DummyAddAnnotation", "java.lang.Deprecated"})
-public class HelloMixin {
+public class HelloMixin implements DummyInterface{
+
+    @Override
+    public void dontDoShit() {
+        System.out.println("DU ARSCH WURDEST ÜBERSCHRIEBEN!");
+    }
+
+    public void yikes() {
+        System.out.println("YIKES");
+    }
 }
