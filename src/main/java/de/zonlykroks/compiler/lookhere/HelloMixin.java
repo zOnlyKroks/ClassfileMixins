@@ -19,4 +19,8 @@ public class HelloMixin implements DummyInterface{
     public void yikes() {
         System.out.println("YIKES");
     }
+
+    public void heyho() {
+
+    }
 }

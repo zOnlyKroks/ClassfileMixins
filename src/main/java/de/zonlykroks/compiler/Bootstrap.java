@@ -19,6 +19,8 @@ public class Bootstrap {
     private final List<File> mixinConfigFiles;
     public final List<MixinConfiguration> mixinConfigurations = new ArrayList<>();
 
+    public static final List<String> transformedClasses = new ArrayList<>();
+
     /**
      * @param mixinConfigPaths the paths to the mixin configuration files
      */

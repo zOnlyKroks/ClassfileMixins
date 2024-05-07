@@ -5,9 +5,11 @@ import de.zonlykroks.compiler.collector.annotations.Mixin;
 import de.zonlykroks.compiler.collector.annotations.modifiers.AnnotationAdder;
 import de.zonlykroks.compiler.collector.annotations.modifiers.AnnotationDropper;
 import de.zonlykroks.compiler.collector.annotations.modifiers.InterfaceInjector;
+import de.zonlykroks.compiler.collector.annotations.modifiers.MethodcallInject;
 import de.zonlykroks.compiler.collector.injectors.AnnotationAdderProcessor;
 import de.zonlykroks.compiler.collector.injectors.AnnotationDropperProcessor;
 import de.zonlykroks.compiler.collector.injectors.InterfaceInjectorProcessor;
+import de.zonlykroks.compiler.collector.injectors.MethodCallInjectorProcessor;
 import org.glavo.classfile.*;
 import org.glavo.classfile.constantpool.ClassEntry;
 
@@ -15,11 +17,16 @@ import java.io.ByteArrayInputStream;
 import java.lang.annotation.Annotation;
 import java.lang.constant.ClassDesc;
 import java.lang.reflect.AccessFlag;
+import java.lang.reflect.Method;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.stream.Stream;
 
 public class MixinTransformerClass {
 
@@ -44,6 +51,7 @@ public class MixinTransformerClass {
 
     private void collectTarget(){
         this.targetPath = Path.of(annotation.target());
+        Bootstrap.transformedClasses.add(annotation.target());
 
         try {
             loadClassFile();
@@ -60,7 +68,7 @@ public class MixinTransformerClass {
     }
 
     private void performTopLevelModifications() {
-        Annotation[] annotations = this.clazz.getAnnotations();
+        final List<Annotation> annotations = new CopyOnWriteArrayList<>(Arrays.asList(clazz.getAnnotations()));
 
         for(ClassEntry interfaceEntry : this.mixinModel.interfaces()) {
             Bootstrap.LOGGER.info("Interface: {}", interfaceEntry);
@@ -71,9 +79,16 @@ public class MixinTransformerClass {
         Bootstrap.LOGGER.info("Merged all interface methods!");
 
         for(MethodModel model : this.mixinModel.methods()) {
-            Bootstrap.LOGGER.info("Method: {}", model.methodName());
+            if(model.methodName().stringValue().equalsIgnoreCase("<init>") || model.methodName().stringValue().equalsIgnoreCase("<clinit>")) {
+                continue;
+            }
 
-            //TODO: Check if init and duplicate methods are present, dont merge those
+            if(this.targetModel.methods().stream().anyMatch(m -> m.methodName().equals(model.methodName()) && m.methodType().equals(model.methodType()))) {
+                Bootstrap.LOGGER.info("Method {} already exists in target class, skipping...", model.methodName());
+                continue;
+            }
+
+            Bootstrap.LOGGER.info("Method: {}", model.methodName());
 
             this.targetModel = mergeMethods(model, this.targetModel, this.targetPath);
         }
@@ -86,6 +101,17 @@ public class MixinTransformerClass {
             }else if(annotation instanceof AnnotationAdder) {
                 this.targetModel = AnnotationAdderProcessor.handleAnnotationAdd(clazz,this.targetPath,this.targetModel);
             }
+            annotations.remove(annotation);
+        }
+
+        performNormalModifications();
+    }
+
+    private void performNormalModifications() {
+        List<Method> annotatedMethods = Arrays.stream(clazz.getMethods()).filter(method -> method.isAnnotationPresent(MethodcallInject.class)).toList();
+
+        for(Method annotatedMethod : annotatedMethods) {
+            this.targetModel = MethodCallInjectorProcessor.handleMethodCallInjection(annotatedMethod.getAnnotation(MethodcallInject.class), this.targetPath, this.targetModel, this.mixinModel, null);
         }
     }
 
