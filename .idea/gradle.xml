@@ -9,6 +9,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/SourceModule" />
+            <option value="$PROJECT_DIR$/TestImpl" />
+            <option value="$PROJECT_DIR$/TestTarget" />
           </set>
         </option>
       </GradleProjectSettings>

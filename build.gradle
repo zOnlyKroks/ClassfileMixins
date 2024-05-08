@@ -6,12 +6,40 @@ group = "de.zonlykroks.compiler"
 version = "1.0-SNAPSHOT"
 
 repositories {
-    mavenCentral()
 }
 
 dependencies {
-    implementation("org.glavo:classfile:0.5.0")
-    implementation("org.json:json:20240303")
-    implementation("org.apache.logging.log4j:log4j-api:3.0.0-beta2")
-    implementation("org.apache.logging.log4j:log4j-core:3.0.0-beta2")
+}
+
+// Define a task to compile the subproject named "TestImpl"
+tasks.register('compileTestImpl', Jar) {
+    dependsOn('TestImpl:build')
+    outputs.files(file("TestImpl/build/libs/TestImpl.jar"))
+}
+
+tasks.register('compileTestTarget', Jar) {
+    dependsOn('TestTarget:build')
+    outputs.files(file("TestTarget/build/libs/TestTarget.jar"))
+}
+
+// Define a task to move the compiled jar into the "target" folder
+tasks.register('moveJarImpl', Copy) {
+    dependsOn compileTestImpl
+    from "TestTarget/build/libs"
+    into "target"
+    include "TestTarget-1.0-SNAPSHOT.jar"
+}
+
+tasks.register('moveJarTarget', Copy) {
+    dependsOn compileTestTarget
+    from "TestTarget/build/libs"
+    into "target"
+    include "TestTarget-1.0-SNAPSHOT.jar"
+}
+
+// Define a task to execute the SourceModule
+tasks.register('executeSourceModule') {
+    dependsOn moveJarImpl
+    dependsOn moveJarTarget
+    dependsOn('SourceModule:run')
 }
