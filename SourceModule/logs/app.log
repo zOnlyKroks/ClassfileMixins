@@ -534,3 +534,200 @@ java.lang.NullPointerException: null
 	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
 	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:64) [main/:?]
 	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+14:07:17.180 [main] INFO  ClassfileMixin - Bootstrapping...
+14:07:17.214 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
+14:07:17.215 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
+14:07:17.253 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:07:17.253 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main.class in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
+14:07:17.253 [main] ERROR ClassfileMixin - Failed to bootstrap
+java.lang.NullPointerException: null
+	at java.base/java.util.ArrayDeque.addLast(ArrayDeque.java:302) ~[?:?]
+	at java.base/java.util.ArrayDeque.add(ArrayDeque.java:493) ~[?:?]
+	at java.base/jdk.internal.loader.URLClassPath.<init>(URLClassPath.java:154) ~[?:?]
+	at java.base/jdk.internal.loader.URLClassPath.<init>(URLClassPath.java:171) ~[?:?]
+	at java.base/java.net.URLClassLoader.<init>(URLClassLoader.java:123) ~[?:?]
+	at java.base/java.net.FactoryURLClassLoader.<init>(URLClassLoader.java:852) ~[?:?]
+	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:805) ~[?:?]
+	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
+	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
+	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
+	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+14:07:31.881 [main] INFO  ClassfileMixin - Bootstrapping...
+14:07:31.916 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
+14:07:31.916 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
+14:07:31.957 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:07:31.957 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main.java in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
+14:07:31.958 [main] ERROR ClassfileMixin - Failed to bootstrap
+java.lang.NullPointerException: null
+	at java.base/java.util.ArrayDeque.addLast(ArrayDeque.java:302) ~[?:?]
+	at java.base/java.util.ArrayDeque.add(ArrayDeque.java:493) ~[?:?]
+	at java.base/jdk.internal.loader.URLClassPath.<init>(URLClassPath.java:154) ~[?:?]
+	at java.base/jdk.internal.loader.URLClassPath.<init>(URLClassPath.java:171) ~[?:?]
+	at java.base/java.net.URLClassLoader.<init>(URLClassLoader.java:123) ~[?:?]
+	at java.base/java.net.FactoryURLClassLoader.<init>(URLClassLoader.java:852) ~[?:?]
+	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:805) ~[?:?]
+	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
+	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
+	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
+	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+14:07:43.659 [main] INFO  ClassfileMixin - Bootstrapping...
+14:07:43.701 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
+14:07:43.703 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
+14:07:43.746 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:07:43.746 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
+14:07:43.747 [main] ERROR ClassfileMixin - Failed to bootstrap
+java.lang.NullPointerException: null
+	at java.base/java.util.ArrayDeque.addLast(ArrayDeque.java:302) ~[?:?]
+	at java.base/java.util.ArrayDeque.add(ArrayDeque.java:493) ~[?:?]
+	at java.base/jdk.internal.loader.URLClassPath.<init>(URLClassPath.java:154) ~[?:?]
+	at java.base/jdk.internal.loader.URLClassPath.<init>(URLClassPath.java:171) ~[?:?]
+	at java.base/java.net.URLClassLoader.<init>(URLClassLoader.java:123) ~[?:?]
+	at java.base/java.net.FactoryURLClassLoader.<init>(URLClassLoader.java:852) ~[?:?]
+	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:805) ~[?:?]
+	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
+	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
+	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
+	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+14:13:19.355 [main] INFO  ClassfileMixin - Bootstrapping...
+14:13:19.393 [main] INFO  ClassfileMixin - Adding \Users\finnr\IdeaProjects\ClassfileMixins\target\TestImpl-1.0-SNAPSHOT.jar to classpath
+14:13:19.394 [main] INFO  ClassfileMixin - Adding \Users\finnr\IdeaProjects\ClassfileMixins\target\TestTarget-1.0-SNAPSHOT.jar to classpath
+14:13:19.437 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:13:19.437 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
+14:13:19.438 [main] ERROR ClassfileMixin - Failed to bootstrap
+java.lang.NullPointerException: null
+	at java.base/java.util.ArrayDeque.addLast(ArrayDeque.java:302) ~[?:?]
+	at java.base/java.util.ArrayDeque.add(ArrayDeque.java:493) ~[?:?]
+	at java.base/jdk.internal.loader.URLClassPath.<init>(URLClassPath.java:154) ~[?:?]
+	at java.base/jdk.internal.loader.URLClassPath.<init>(URLClassPath.java:171) ~[?:?]
+	at java.base/java.net.URLClassLoader.<init>(URLClassLoader.java:123) ~[?:?]
+	at java.base/java.net.FactoryURLClassLoader.<init>(URLClassLoader.java:852) ~[?:?]
+	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:805) ~[?:?]
+	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
+	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
+	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
+	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+14:14:01.553 [main] INFO  ClassfileMixin - Bootstrapping...
+14:14:01.588 [main] INFO  ClassfileMixin - Adding C:\Users\finnr\IdeaProjects\ClassfileMixins\target\TestImpl-1.0-SNAPSHOT.jar to classpath
+14:14:01.589 [main] INFO  ClassfileMixin - Adding C:\Users\finnr\IdeaProjects\ClassfileMixins\target\TestTarget-1.0-SNAPSHOT.jar to classpath
+14:14:01.627 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:14:01.627 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
+14:14:01.628 [main] ERROR ClassfileMixin - Failed to bootstrap
+java.lang.NullPointerException: null
+	at java.base/java.util.ArrayDeque.addLast(ArrayDeque.java:302) ~[?:?]
+	at java.base/java.util.ArrayDeque.add(ArrayDeque.java:493) ~[?:?]
+	at java.base/jdk.internal.loader.URLClassPath.<init>(URLClassPath.java:154) ~[?:?]
+	at java.base/jdk.internal.loader.URLClassPath.<init>(URLClassPath.java:171) ~[?:?]
+	at java.base/java.net.URLClassLoader.<init>(URLClassLoader.java:123) ~[?:?]
+	at java.base/java.net.FactoryURLClassLoader.<init>(URLClassLoader.java:852) ~[?:?]
+	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:805) ~[?:?]
+	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
+	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
+	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
+	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+14:15:30.382 [main] INFO  ClassfileMixin - Bootstrapping...
+14:15:30.417 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
+14:15:30.418 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
+14:15:30.458 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:15:30.458 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
+14:15:30.459 [main] ERROR ClassfileMixin - Failed to bootstrap
+java.lang.NullPointerException: null
+	at java.base/java.util.ArrayDeque.addLast(ArrayDeque.java:302) ~[?:?]
+	at java.base/java.util.ArrayDeque.add(ArrayDeque.java:493) ~[?:?]
+	at java.base/jdk.internal.loader.URLClassPath.<init>(URLClassPath.java:154) ~[?:?]
+	at java.base/jdk.internal.loader.URLClassPath.<init>(URLClassPath.java:171) ~[?:?]
+	at java.base/java.net.URLClassLoader.<init>(URLClassLoader.java:123) ~[?:?]
+	at java.base/java.net.FactoryURLClassLoader.<init>(URLClassLoader.java:852) ~[?:?]
+	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:805) ~[?:?]
+	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
+	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
+	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:64) [main/:?]
+	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+14:15:57.507 [main] INFO  ClassfileMixin - Bootstrapping...
+14:15:57.543 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
+14:15:57.543 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
+14:15:57.584 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:15:57.585 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
+14:15:57.585 [main] ERROR ClassfileMixin - Failed to bootstrap
+java.lang.NullPointerException: null
+	at java.base/java.util.ArrayDeque.addLast(ArrayDeque.java:302) ~[?:?]
+	at java.base/java.util.ArrayDeque.add(ArrayDeque.java:493) ~[?:?]
+	at java.base/jdk.internal.loader.URLClassPath.<init>(URLClassPath.java:154) ~[?:?]
+	at java.base/jdk.internal.loader.URLClassPath.<init>(URLClassPath.java:171) ~[?:?]
+	at java.base/java.net.URLClassLoader.<init>(URLClassLoader.java:123) ~[?:?]
+	at java.base/java.net.FactoryURLClassLoader.<init>(URLClassLoader.java:852) ~[?:?]
+	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:805) ~[?:?]
+	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
+	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
+	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:66) [main/:?]
+	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+14:16:06.098 [main] INFO  ClassfileMixin - Bootstrapping...
+14:16:06.138 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
+14:16:06.139 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
+14:16:06.179 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:16:06.179 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
+14:16:06.180 [main] ERROR ClassfileMixin - Failed to bootstrap
+java.lang.NullPointerException: null
+	at java.base/java.util.ArrayDeque.addLast(ArrayDeque.java:302) ~[?:?]
+	at java.base/java.util.ArrayDeque.add(ArrayDeque.java:493) ~[?:?]
+	at java.base/jdk.internal.loader.URLClassPath.<init>(URLClassPath.java:154) ~[?:?]
+	at java.base/jdk.internal.loader.URLClassPath.<init>(URLClassPath.java:171) ~[?:?]
+	at java.base/java.net.URLClassLoader.<init>(URLClassLoader.java:123) ~[?:?]
+	at java.base/java.net.FactoryURLClassLoader.<init>(URLClassLoader.java:852) ~[?:?]
+	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:805) ~[?:?]
+	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
+	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
+	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:63) [main/:?]
+	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+14:43:11.335 [main] INFO  ClassfileMixin - Bootstrapping...
+14:43:11.372 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
+14:43:11.373 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
+14:43:11.407 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:43:11.408 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
+14:43:11.408 [main] ERROR ClassfileMixin - Failed to bootstrap
+java.lang.ClassNotFoundException:  de.zonlykroks.test.Main
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
+	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
+	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:59) [main/:?]
+	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+14:44:28.044 [main] INFO  ClassfileMixin - Bootstrapping...
+14:44:28.082 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
+14:44:28.082 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
+14:44:28.120 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:44:28.121 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
+14:44:28.121 [main] ERROR ClassfileMixin - Failed to bootstrap
+java.lang.ClassNotFoundException:  de.zonlykroks.test.Main
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
+	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
+	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+14:44:40.062 [main] INFO  ClassfileMixin - Bootstrapping...
+14:44:40.095 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
+14:44:40.095 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
+14:44:40.130 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:44:40.130 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
+14:44:40.131 [main] ERROR ClassfileMixin - Failed to bootstrap
+java.lang.ClassNotFoundException: Main
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
+	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
+	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]

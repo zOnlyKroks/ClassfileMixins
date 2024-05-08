@@ -22,12 +22,16 @@ tasks.register('compileTestTarget', Jar) {
     outputs.files(file("TestTarget/build/libs/TestTarget.jar"))
 }
 
-// Define a task to move the compiled jar into the "target" folder
+tasks.register('compileSourceModule', Jar) {
+    dependsOn('SourceModule:build')
+    outputs.files(file("SourceModule/build/libs/SourceModule.jar"))
+}
+
 tasks.register('moveJarImpl', Copy) {
     dependsOn compileTestImpl
-    from "TestTarget/build/libs"
+    from "TestImpl/build/libs"
     into "target"
-    include "TestTarget-1.0-SNAPSHOT.jar"
+    include "TestImpl-1.0-SNAPSHOT.jar"
 }
 
 tasks.register('moveJarTarget', Copy) {
@@ -37,9 +41,24 @@ tasks.register('moveJarTarget', Copy) {
     include "TestTarget-1.0-SNAPSHOT.jar"
 }
 
+tasks.register('moveJarSource', Copy) {
+    dependsOn compileSourceModule
+    from "SourceModule/build/libs"
+    into "target"
+    include "SourceModule-1.0-SNAPSHOT-all.jar"
+}
+
+tasks.register('runJar', JavaExec) {
+    getMainClass().set('-jar')
+    args += ['target/SourceModule-1.0-SNAPSHOT-all.jar']
+    args += ['-j C:/Users/finnr/IdeaProjects/ClassfileMixins/target/']
+    args += ['-m de.zonlykroks.test.Main']
+}
+
 // Define a task to execute the SourceModule
 tasks.register('executeSourceModule') {
     dependsOn moveJarImpl
     dependsOn moveJarTarget
-    dependsOn('SourceModule:run')
+    dependsOn moveJarSource
+    dependsOn runJar
 }
