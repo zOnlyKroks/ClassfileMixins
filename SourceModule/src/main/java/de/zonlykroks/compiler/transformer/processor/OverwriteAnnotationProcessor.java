@@ -4,9 +4,10 @@ import de.zonlykroks.compiler.annotations.Overwrite;
 import de.zonlykroks.compiler.transformer.util.TransformerUtils;
 import org.glavo.classfile.*;
 
-public class OverwriteAnnotationProcessor {
+public class OverwriteAnnotationProcessor extends AbstractAnnotationProcessor<Overwrite>{
 
-    public static ClassModel processOverwriteAnnotation(Overwrite injectAnnotation, ClassModel targetModel, ClassModel sourceClassModel, MethodModel sourceMethodModule) {
+    @Override
+    public ClassModel processAnnotation(Overwrite injectAnnotation, ClassModel targetModel, ClassModel sourceClassModel, MethodModel sourceMethodModule) {
         System.out.println("Clazz: " + sourceClassModel.thisClass().name() +  " , Overwriting: " + injectAnnotation.method() + " , with: " + sourceMethodModule.methodName().stringValue());
 
         byte[] modified = ClassFile.of().transform(targetModel, ClassTransform.transformingMethodBodies(methodModel -> methodModel.methodName().stringValue().equalsIgnoreCase(injectAnnotation.method()), new CodeTransform() {
@@ -14,17 +15,16 @@ public class OverwriteAnnotationProcessor {
 
             @Override
             public void accept(CodeBuilder codeBuilder, CodeElement codeElement) {
-               if(!seen) {
-                   TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule);
+                if(!seen) {
+                    TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule);
 
-                   codeBuilder.return_();
+                    codeBuilder.return_();
 
-                   seen = true;
-               }
+                    seen = true;
+                }
             }
         }));
 
         return ClassFile.of().parse(modified);
     }
-
 }

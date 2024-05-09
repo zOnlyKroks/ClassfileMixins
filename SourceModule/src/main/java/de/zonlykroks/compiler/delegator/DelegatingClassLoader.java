@@ -10,6 +10,8 @@ import java.nio.file.Files;
 
 public class DelegatingClassLoader extends ClassLoader{
 
+    private final ClassFileTransformerImpl classFileTransformer = new ClassFileTransformerImpl();
+
     @Override
     protected Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {
         if(checkIfNoTarget(name)) {
@@ -32,7 +34,7 @@ public class DelegatingClassLoader extends ClassLoader{
 
         ClassModel model = ClassFile.of().parse(getClassBytes(url));
 
-        byte[] modified = ClassFileTransformerImpl.transform(name,model);
+        byte[] modified = classFileTransformer.transform(name,model);
 
         preDefineDumpClass(name, modified);
 

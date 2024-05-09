@@ -17,7 +17,13 @@ import static de.zonlykroks.compiler.delegator.DelegatingClassLoader.getClassByt
 
 public class ClassFileTransformerImpl {
 
-    public static byte[] transform(String targetClassName, ClassModel targetModel) {
+    private final InjectAnnotationProcessor InjectAnnotationProcessor = new InjectAnnotationProcessor();
+    private final OverwriteAnnotationProcessor OverwriteAnnotationProcessor = new OverwriteAnnotationProcessor();
+    private final ModifyConstantAnnotationProcessor ModifyConstantAnnotationProcessor = new ModifyConstantAnnotationProcessor();
+    private final ModifyReturnValueAnnotationProcessor ModifyReturnValueAnnotationProcessor = new ModifyReturnValueAnnotationProcessor();
+    private final RedirectAnnotationProcessor RedirectAnnotationProcessor = new RedirectAnnotationProcessor();
+
+    public byte[] transform(String targetClassName, ClassModel targetModel) {
         String[] split = targetClassName.split("\\.");
         targetClassName = split[split.length - 1];
 
@@ -31,29 +37,24 @@ public class ClassFileTransformerImpl {
             targetModel = transformInternal(clazz.mixinClazz, targetModel, ClassFile.of().parse(getClassBytes(url)));
         }
 
-        return ClassFile.of().transform(targetModel, ClassTransform.ofStateful( () -> new ClassTransform() {
-            @Override
-            public void accept(ClassBuilder classBuilder, ClassElement classElement) {
-                classBuilder.accept(classElement);
-            }
-        }));
+        return ClassFile.of().transform(targetModel, ClassTransform.ofStateful( () -> ClassFileBuilder::accept));
     }
 
-    private static ClassModel transformInternal(Class<?> transformerClassModel, ClassModel targetModel, ClassModel transformerModel) {
+    private ClassModel transformInternal(Class<?> transformerClassModel, ClassModel targetModel, ClassModel transformerModel) {
         targetModel = transformMergeInterfaces(targetModel, transformerModel);
         targetModel = transformMergeMethods(targetModel, transformerModel);
 
         for(Method method : transformerClassModel.getMethods()) {
             MethodModel model = transformerModel.methods().stream().filter(methodModel -> methodModel.methodName().stringValue().equalsIgnoreCase(method.getName())).findFirst().orElse(null);
+
             for(Annotation annotation : method.getAnnotations()) {
-                if(annotation instanceof InjectAnnotation injectAnnotation) {
-                    targetModel = InjectAnnotationProcessor.processInjectAnnotation(injectAnnotation, targetModel, transformerModel, model);
-                }else if(annotation instanceof Overwrite overwrite) {
-                    targetModel = OverwriteAnnotationProcessor.processOverwriteAnnotation(overwrite, targetModel, transformerModel, model);
-                }else if(annotation instanceof ModifyConstant constant) {
-                    targetModel = ModifyConstantAnnotationProcessor.processModifyConstantAnnotation(constant, targetModel, transformerModel, model);
-                }else if(annotation instanceof ModifyReturnValue returnValue) {
-                    targetModel = ModifyReturnValueAnnotationProcessor.processModifyReturnValueAnnotation(returnValue, targetModel, transformerModel, model);
+                switch (annotation) {
+                    case InjectAnnotation injectAnnotation -> targetModel = InjectAnnotationProcessor.processAnnotation(injectAnnotation, targetModel, transformerModel, model);
+                    case Overwrite overwrite -> targetModel = OverwriteAnnotationProcessor.processAnnotation(overwrite, targetModel, transformerModel, model);
+                    case ModifyConstant constant -> targetModel = ModifyConstantAnnotationProcessor.processAnnotation(constant, targetModel, transformerModel, model);
+                    case ModifyReturnValue returnValue -> targetModel = ModifyReturnValueAnnotationProcessor.processAnnotation(returnValue, targetModel, transformerModel, model);
+                    case Redirect redirect -> targetModel = RedirectAnnotationProcessor.processAnnotation(redirect, targetModel, transformerModel, model);
+                    default -> System.out.println("Unknown annotation: " + annotation);
                 }
             }
         }
@@ -61,7 +62,7 @@ public class ClassFileTransformerImpl {
         return targetModel;
     }
 
-    private static ClassModel transformMergeMethods(ClassModel targetModel, ClassModel transformerModel) {
+    private ClassModel transformMergeMethods(ClassModel targetModel, ClassModel transformerModel) {
         byte[] modified = ClassFile.of().transform(targetModel, ClassTransform.ofStateful( () -> new ClassTransform() {
             @Override
             public void accept(ClassBuilder classBuilder, ClassElement classElement) {
@@ -90,7 +91,7 @@ public class ClassFileTransformerImpl {
         return ClassFile.of().parse(modified);
     }
 
-    private static ClassModel transformMergeInterfaces(ClassModel targetModel, ClassModel transformerModel) {
+    private ClassModel transformMergeInterfaces(ClassModel targetModel, ClassModel transformerModel) {
         byte[] modified = ClassFile.of().transform(targetModel, ClassTransform.ofStateful( () -> new ClassTransform() {
             @Override
             public void accept(ClassBuilder classBuilder, ClassElement classElement) {
