@@ -1,14 +1,12 @@
 package de.zonlykroks.compiler.delegator;
 
 import de.zonlykroks.compiler.Bootstrap;
+import de.zonlykroks.compiler.transformer.ClassFileTransformerImpl;
 import org.glavo.classfile.*;
-import org.glavo.classfile.instruction.ConstantInstruction;
 
 import java.io.*;
 import java.net.URL;
 import java.nio.file.Files;
-import java.util.Base64;
-import java.util.Objects;
 
 public class DelegatingClassLoader extends ClassLoader{
 
@@ -19,26 +17,26 @@ public class DelegatingClassLoader extends ClassLoader{
         }
 
         if(checkIfMixinTargetClass(name)) {
-            URL url = Bootstrap.mixinClassLoader.findResource(name.replace(".", "/") + ".class");
-
-            ClassModel model = ClassFile.of().parse(getClassBytes(url));
-
-            byte[] modified = ClassFile.of().transform(model, ClassTransform.transformingMethodBodies((codeB, codeE) -> {
-                if (Objects.requireNonNull(codeE) instanceof ConstantInstruction ci) {
-                    if (ci.constantValue() instanceof String s)
-                        codeB.constantInstruction("I fucking rewrote you runtime ;D");
-                    else codeB.with(codeE);
-                } else {
-                    codeB.with(codeE);
-                }
-            }));
-
-            preDefineDumpClass(name, modified);
-
-            return defineClass(name, modified, 0, modified.length);
+            return defineMixinRelatedClass(name);
         }
 
-        return super.loadClass(name, resolve);
+        try {
+            return super.loadClass(name, resolve);
+        }catch (ClassNotFoundException e) {
+            return defineMixinRelatedClass(name);
+        }
+    }
+
+    private Class<?> defineMixinRelatedClass(String name) {
+        URL url = Bootstrap.mixinClassLoader.findResource(name.replace(".", "/") + ".class");
+
+        ClassModel model = ClassFile.of().parse(getClassBytes(url));
+
+        byte[] modified = ClassFileTransformerImpl.transform(name,model);
+
+        preDefineDumpClass(name, modified);
+
+        return defineClass(name, modified, 0, modified.length);
     }
 
     private boolean checkIfNoTarget(String name) {
@@ -73,7 +71,7 @@ public class DelegatingClassLoader extends ClassLoader{
        }
     }
 
-    private byte[] getClassBytes(URL url){
+    public static byte[] getClassBytes(URL url){
         try (InputStream inputStream = url.openStream();
              ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
             byte[] buffer = new byte[1024];
