@@ -98,7 +98,9 @@ public class InjectAnnotationProcessor extends AbstractAnnotationProcessor<Injec
     }
 
     private void handleInvokeInstruction(CodeBuilder builder, InvokeInstruction instruction, ClassModel targetModel, MethodModel sourceMethodModule) {
-        if(instruction.name().stringValue().equalsIgnoreCase(targetToSelect)) {
+        String fullyQuallifiedTarget = instruction.owner().name().stringValue() + "." + instruction.name().stringValue() + ":" + instruction.type().stringValue();
+
+        if(fullyQuallifiedTarget.equalsIgnoreCase(targetToSelect)) {
             if(selector == InjectSelector.INVOKE_BEFORE) {
                 TransformerUtils.invokeVirtualSourceMethod(builder, targetModel, sourceMethodModule, captureLocals ? localVariables : null);
 

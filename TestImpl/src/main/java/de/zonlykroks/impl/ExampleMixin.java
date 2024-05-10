@@ -2,14 +2,12 @@ package de.zonlykroks.impl;
 
 import de.zonlykroks.compiler.annotations.*;
 
-import java.io.PrintStream;
-
 @Mixin(classDescriptor = "Main")
 public class ExampleMixin implements DummyInterface{
 
-    @ModifyGetFieldReference(method = "injectIntoMe", field = "java/lang/System.out:Ljava/io/PrintStream;")
-    public PrintStream modifyPrintStream() {
-        return System.err;
+    @Overwrite(method = "injectIntoMe")
+    public void overwriteMyInject() {
+        System.out.println("I am the overwritten method");
     }
 
     @Override

@@ -14,12 +14,16 @@ public class RedirectAnnotationProcessor extends AbstractAnnotationProcessor<Red
             @Override
             public void accept(CodeBuilder codeBuilder, CodeElement codeElement) {
                 if(codeElement instanceof InvokeInstruction invokeInstruction) {
-                    if(invokeInstruction.name().stringValue().equalsIgnoreCase(redirectAnnotation.target())) {
+                    String fullyQuallifiedTarget = invokeInstruction.owner().name().stringValue() + "." + invokeInstruction.name().stringValue() + ":" + invokeInstruction.type().stringValue();
+
+                    if(fullyQuallifiedTarget.equalsIgnoreCase(redirectAnnotation.target())) {
+
                         if(currentInvokeTarget == redirectAnnotation.methodIndex()) {
                             TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule);
                         }else {
                             codeBuilder.with(codeElement);
                         }
+
                         currentInvokeTarget++;
                     }
                 }else {
