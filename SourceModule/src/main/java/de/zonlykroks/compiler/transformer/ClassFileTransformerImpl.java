@@ -56,7 +56,9 @@ public class ClassFileTransformerImpl {
                     case ModifyReturnValue returnValue -> targetModel = ModifyReturnValueAnnotationProcessor.processAnnotation(returnValue, targetModel, transformerModel, model);
                     case Redirect redirect -> targetModel = RedirectAnnotationProcessor.processAnnotation(redirect, targetModel, transformerModel, model);
                     case ModifyGetFieldReference getStatic -> targetModel = ModifyGetFieldReferenceAnnotationProcessor.processAnnotation(getStatic, targetModel, transformerModel, model);
-                    default -> System.out.println("Unknown annotation: " + annotation);
+                    default -> {
+                        //Nothing bad ever happens to the kenedies
+                    }
                 }
             }
         }
