@@ -3,6 +3,8 @@ package de.zonlykroks.compiler.transformer.processor;
 import de.zonlykroks.compiler.annotations.ModifyReturnValue;
 import de.zonlykroks.compiler.transformer.util.TransformerUtils;
 import org.glavo.classfile.*;
+import org.glavo.classfile.instruction.FieldInstruction;
+import org.glavo.classfile.instruction.LoadInstruction;
 import org.glavo.classfile.instruction.ReturnInstruction;
 
 public class ModifyReturnValueAnnotationProcessor extends AbstractAnnotationProcessor<ModifyReturnValue>{
@@ -26,9 +28,10 @@ public class ModifyReturnValueAnnotationProcessor extends AbstractAnnotationProc
                     }
 
                     currentReturnIndex++;
-                } else {
-                    codeBuilder.with(codeElement);
+                    return;
                 }
+
+                codeBuilder.with(codeElement);
             }
         }));
 

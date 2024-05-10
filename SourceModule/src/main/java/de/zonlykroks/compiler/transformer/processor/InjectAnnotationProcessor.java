@@ -4,18 +4,18 @@ import de.zonlykroks.compiler.annotations.InjectAnnotation;
 import de.zonlykroks.compiler.annotations.util.InjectSelector;
 import de.zonlykroks.compiler.transformer.util.TransformerUtils;
 import org.glavo.classfile.*;
-import org.glavo.classfile.instruction.InvokeDynamicInstruction;
-import org.glavo.classfile.instruction.InvokeInstruction;
-import org.glavo.classfile.instruction.ReturnInstruction;
+import org.glavo.classfile.instruction.*;
 
-import java.lang.constant.ClassDesc;
-import java.util.Optional;
-
+import java.util.HashMap;
+import java.util.Map;
 
 public class InjectAnnotationProcessor extends AbstractAnnotationProcessor<InjectAnnotation>{
 
     private InjectSelector selector;
     private String targetToSelect;
+    private boolean captureLocals;
+
+    private final Map<Integer, TypeKind> localVariables = new HashMap<>();
 
     @Override
     public ClassModel processAnnotation(InjectAnnotation injectAnnotation, ClassModel targetModel, ClassModel sourceClassModel, MethodModel sourceMethodModule) {
@@ -24,15 +24,26 @@ public class InjectAnnotationProcessor extends AbstractAnnotationProcessor<Injec
         selector = injectAnnotation.at().selector();
         targetToSelect = injectAnnotation.at().target();
 
+        captureLocals = injectAnnotation.captureLocals();
+
         byte[] modified = ClassFile.of().transform(targetModel, ClassTransform.transformingMethodBodies(methodModel -> methodModel.methodName().stringValue().equalsIgnoreCase(injectAnnotation.method()), new CodeTransform() {
             boolean seenTarget = false;
-            int currentReturnIsn = -1;
+            int currentTargetIsn = -1;
 
             @Override
             public void accept(CodeBuilder codeBuilder, CodeElement codeElement) {
+                if(codeElement instanceof LoadInstruction loadInstruction) {
+                    localVariables.put(loadInstruction.slot(), loadInstruction.typeKind());
+                }else if(codeElement instanceof StoreInstruction storeInstruction) {
+                    localVariables.put(storeInstruction.slot(), storeInstruction.typeKind());
+                }else if(codeElement instanceof ConstantInstruction constantInstruction) {
+                    localVariables.put(constantInstruction.opcode().slot(), constantInstruction.typeKind());
+                }
+
+
                 if(selector == InjectSelector.HEAD && !seenTarget) {
                     if(!injectAnnotation.method().equalsIgnoreCase("<init>")) {
-                        TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule);
+                        TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, captureLocals ? localVariables : null);
                     }else {
                         System.out.println("Injecting into <init> at HEAD not allowed! You should probably use TAIL!");
                     }
@@ -46,24 +57,36 @@ public class InjectAnnotationProcessor extends AbstractAnnotationProcessor<Injec
 
                 if(codeElement instanceof ReturnInstruction && selector == InjectSelector.RETURN) {
                     if(injectAnnotation.at().index() < 0) {
-                        codeBuilder.aload(0);
-
-                        codeBuilder.invokevirtual(ClassDesc.of(targetModel.thisClass().name().stringValue().replace("/", ".")), sourceMethodModule.methodName().stringValue(), sourceMethodModule.methodTypeSymbol());
+                        TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, captureLocals ? localVariables : null);
 
                         codeBuilder.with(codeElement);
                     }else {
-                        if(currentReturnIsn == injectAnnotation.at().index()) {
+                        if(currentTargetIsn == injectAnnotation.at().index()) {
                             codeBuilder.aload(0);
 
-                            codeBuilder.invokevirtual(ClassDesc.of(targetModel.thisClass().name().stringValue().replace("/", ".")), sourceMethodModule.methodName().stringValue(), sourceMethodModule.methodTypeSymbol());
-
-                            codeBuilder.with(codeElement);
+                            TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, captureLocals ? localVariables : null);
                         }
                     }
 
-                    currentReturnIsn++;
+                    currentTargetIsn++;
 
                     return;
+                }
+
+                if(codeElement instanceof LoadInstruction && selector == InjectSelector.LOAD_ISN) {
+                    if(injectAnnotation.at().index() < 0) {
+                        TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, captureLocals ? localVariables : null);
+
+                        codeBuilder.with(codeElement);
+                    }else {
+                        if(currentTargetIsn == injectAnnotation.at().index()) {
+                            codeBuilder.aload(0);
+
+                            TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, captureLocals ? localVariables : null);
+                        }
+                    }
+
+                    currentTargetIsn++;
                 }
 
                 //Elements with no explicit support yet / not needed;
@@ -77,9 +100,7 @@ public class InjectAnnotationProcessor extends AbstractAnnotationProcessor<Injec
     private void handleInvokeInstruction(CodeBuilder builder, InvokeInstruction instruction, ClassModel targetModel, MethodModel sourceMethodModule) {
         if(instruction.name().stringValue().equalsIgnoreCase(targetToSelect)) {
             if(selector == InjectSelector.INVOKE_BEFORE) {
-                builder.aload(0);
-
-                builder.invokevirtual(ClassDesc.of(targetModel.thisClass().name().stringValue().replace("/", ".")), sourceMethodModule.methodName().stringValue(), sourceMethodModule.methodTypeSymbol());
+                TransformerUtils.invokeVirtualSourceMethod(builder, targetModel, sourceMethodModule, captureLocals ? localVariables : null);
 
                 builder.with(instruction);
 
@@ -87,9 +108,7 @@ public class InjectAnnotationProcessor extends AbstractAnnotationProcessor<Injec
             }else if(selector == InjectSelector.INVOKE_AFTER) {
                 builder.with(instruction);
 
-                builder.aload(0);
-
-                builder.invokevirtual(ClassDesc.of(targetModel.thisClass().name().stringValue().replace("/", ".")), sourceMethodModule.methodName().stringValue(), sourceMethodModule.methodTypeSymbol());
+                TransformerUtils.invokeVirtualSourceMethod(builder, targetModel, sourceMethodModule, captureLocals ? localVariables : null);
 
                 return;
             }

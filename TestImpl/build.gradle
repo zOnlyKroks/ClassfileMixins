@@ -11,4 +11,5 @@ repositories {
 
 dependencies {
     implementation project(":SourceModule")
+    implementation project(":TestTarget")
 }

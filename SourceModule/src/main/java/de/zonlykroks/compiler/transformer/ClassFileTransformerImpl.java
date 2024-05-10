@@ -22,6 +22,7 @@ public class ClassFileTransformerImpl {
     private final ModifyConstantAnnotationProcessor ModifyConstantAnnotationProcessor = new ModifyConstantAnnotationProcessor();
     private final ModifyReturnValueAnnotationProcessor ModifyReturnValueAnnotationProcessor = new ModifyReturnValueAnnotationProcessor();
     private final RedirectAnnotationProcessor RedirectAnnotationProcessor = new RedirectAnnotationProcessor();
+    private final ModifyGetFieldReferenceAnnotationProcessor ModifyGetFieldReferenceAnnotationProcessor = new ModifyGetFieldReferenceAnnotationProcessor();
 
     public byte[] transform(String targetClassName, ClassModel targetModel) {
         String[] split = targetClassName.split("\\.");
@@ -54,6 +55,7 @@ public class ClassFileTransformerImpl {
                     case ModifyConstant constant -> targetModel = ModifyConstantAnnotationProcessor.processAnnotation(constant, targetModel, transformerModel, model);
                     case ModifyReturnValue returnValue -> targetModel = ModifyReturnValueAnnotationProcessor.processAnnotation(returnValue, targetModel, transformerModel, model);
                     case Redirect redirect -> targetModel = RedirectAnnotationProcessor.processAnnotation(redirect, targetModel, transformerModel, model);
+                    case ModifyGetFieldReference getStatic -> targetModel = ModifyGetFieldReferenceAnnotationProcessor.processAnnotation(getStatic, targetModel, transformerModel, model);
                     default -> System.out.println("Unknown annotation: " + annotation);
                 }
             }
@@ -84,8 +86,7 @@ public class ClassFileTransformerImpl {
                             codeBuilder.with(element);
                         }
                     });
-                }
-            }
+                }}
         }));
 
         return ClassFile.of().parse(modified);
