@@ -11,4 +11,5 @@ public @interface ModifyGetFieldReference {
     String method();
     String field();
     int staticIsnIndex() default 0;
+    boolean captureLocal() default false;
 }

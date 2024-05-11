@@ -11,7 +11,7 @@ public class OverwriteAnnotationProcessor extends AbstractAnnotationProcessor<Ov
     public ClassModel processAnnotation(Overwrite injectAnnotation, ClassModel targetModel, ClassModel sourceClassModel, MethodModel sourceMethodModule) {
         System.out.println("Clazz: " + sourceClassModel.thisClass().name() +  " , Overwriting: " + injectAnnotation.method() + " , with: " + sourceMethodModule.methodName().stringValue());
 
-        byte[] modified = ClassFile.of().transform(targetModel, ClassTransform.transformingMethodBodies(methodModel -> methodModel.methodName().stringValue().equalsIgnoreCase(injectAnnotation.method()), new CodeTransform() {
+        byte[] modified = transform(targetModel, getTransformingMethodBodies(injectAnnotation.method(), new CodeTransform() {
             public TypeKind returnKind;
             @Override
             public void accept(CodeBuilder codeBuilder, CodeElement codeElement) {
@@ -28,6 +28,6 @@ public class OverwriteAnnotationProcessor extends AbstractAnnotationProcessor<Ov
             }
         }));
 
-        return ClassFile.of().parse(modified);
+        return parse(modified);
     }
 }

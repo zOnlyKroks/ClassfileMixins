@@ -14,8 +14,7 @@ public class InjectAnnotationProcessor extends AbstractAnnotationProcessor<Injec
     private InjectSelector selector;
     private String targetToSelect;
     private boolean captureLocals;
-
-    private final Map<Integer, TypeKind> localVariables = new HashMap<>();
+    private boolean modifyAll;
 
     @Override
     public ClassModel processAnnotation(InjectAnnotation injectAnnotation, ClassModel targetModel, ClassModel sourceClassModel, MethodModel sourceMethodModule) {
@@ -26,20 +25,15 @@ public class InjectAnnotationProcessor extends AbstractAnnotationProcessor<Injec
 
         captureLocals = injectAnnotation.captureLocals();
 
-        byte[] modified = ClassFile.of().transform(targetModel, ClassTransform.transformingMethodBodies(methodModel -> methodModel.methodName().stringValue().equalsIgnoreCase(injectAnnotation.method()), new CodeTransform() {
+        modifyAll = injectAnnotation.at().index() < 0;
+
+        byte[] modified = transform(targetModel, getTransformingMethodBodies(injectAnnotation.method(), new CodeTransform() {
             boolean seenTarget = false;
-            int currentTargetIsn = -1;
+            int currentTargetIsn = 0;
 
             @Override
             public void accept(CodeBuilder codeBuilder, CodeElement codeElement) {
-                if(codeElement instanceof LoadInstruction loadInstruction) {
-                    localVariables.put(loadInstruction.slot(), loadInstruction.typeKind());
-                }else if(codeElement instanceof StoreInstruction storeInstruction) {
-                    localVariables.put(storeInstruction.slot(), storeInstruction.typeKind());
-                }else if(codeElement instanceof ConstantInstruction constantInstruction) {
-                    localVariables.put(constantInstruction.opcode().slot(), constantInstruction.typeKind());
-                }
-
+                checkIfLocalVariable(codeElement);
 
                 if(selector == InjectSelector.HEAD && !seenTarget) {
                     if(!injectAnnotation.method().equalsIgnoreCase("<init>")) {
@@ -50,13 +44,30 @@ public class InjectAnnotationProcessor extends AbstractAnnotationProcessor<Injec
 
                     seenTarget = true;
                 }
+
                 if(codeElement instanceof InvokeInstruction invokeInstruction) {
-                    handleInvokeInstruction(codeBuilder, invokeInstruction,targetModel,sourceMethodModule);
+                    String fullyQuallifiedTarget = invokeInstruction.owner().name().stringValue() + "." + invokeInstruction.name().stringValue() + ":" + invokeInstruction.type().stringValue();
+
+                    if(fullyQuallifiedTarget.equalsIgnoreCase(targetToSelect) && currentTargetIsn == injectAnnotation.at().index()) {
+                        if(selector == InjectSelector.INVOKE_BEFORE) {
+                            TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, captureLocals ? localVariables : null);
+
+                            codeBuilder.with(codeElement);
+                        }else if(selector == InjectSelector.INVOKE_AFTER) {
+                            codeBuilder.with(codeElement);
+
+                            TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, captureLocals ? localVariables : null);
+                        }
+                    }else {
+                        codeBuilder.with(codeElement);
+                    }
+
+                    currentTargetIsn++;
                     return;
                 }
 
                 if(codeElement instanceof ReturnInstruction && selector == InjectSelector.RETURN) {
-                    if(injectAnnotation.at().index() < 0) {
+                    if(modifyAll) {
                         TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, captureLocals ? localVariables : null);
 
                         codeBuilder.with(codeElement);
@@ -69,12 +80,11 @@ public class InjectAnnotationProcessor extends AbstractAnnotationProcessor<Injec
                     }
 
                     currentTargetIsn++;
-
                     return;
                 }
 
                 if(codeElement instanceof LoadInstruction && selector == InjectSelector.LOAD_ISN) {
-                    if(injectAnnotation.at().index() < 0) {
+                    if(modifyAll) {
                         TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, captureLocals ? localVariables : null);
 
                         codeBuilder.with(codeElement);
@@ -87,6 +97,7 @@ public class InjectAnnotationProcessor extends AbstractAnnotationProcessor<Injec
                     }
 
                     currentTargetIsn++;
+                    return;
                 }
 
                 //Elements with no explicit support yet / not needed;
@@ -94,28 +105,6 @@ public class InjectAnnotationProcessor extends AbstractAnnotationProcessor<Injec
             }
         }));
 
-        return ClassFile.of().parse(modified);
-    }
-
-    private void handleInvokeInstruction(CodeBuilder builder, InvokeInstruction instruction, ClassModel targetModel, MethodModel sourceMethodModule) {
-        String fullyQuallifiedTarget = instruction.owner().name().stringValue() + "." + instruction.name().stringValue() + ":" + instruction.type().stringValue();
-
-        if(fullyQuallifiedTarget.equalsIgnoreCase(targetToSelect)) {
-            if(selector == InjectSelector.INVOKE_BEFORE) {
-                TransformerUtils.invokeVirtualSourceMethod(builder, targetModel, sourceMethodModule, captureLocals ? localVariables : null);
-
-                builder.with(instruction);
-
-                return;
-            }else if(selector == InjectSelector.INVOKE_AFTER) {
-                builder.with(instruction);
-
-                TransformerUtils.invokeVirtualSourceMethod(builder, targetModel, sourceMethodModule, captureLocals ? localVariables : null);
-
-                return;
-            }
-        }
-
-        builder.with(instruction);
+        return parse(modified);
     }
 }

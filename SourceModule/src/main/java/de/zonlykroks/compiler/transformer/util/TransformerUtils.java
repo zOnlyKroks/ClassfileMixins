@@ -35,6 +35,7 @@ public class TransformerUtils {
                 case LongType -> builder.lload(entry.getKey());
                 case FloatType -> builder.fload(entry.getKey());
                 case DoubleType -> builder.dload(entry.getKey());
+                case ReferenceType -> builder.aload(entry.getKey());
                 default -> builder.loadInstruction(entry.getValue(), entry.getKey());
             }
         }

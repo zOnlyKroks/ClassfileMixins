@@ -7,8 +7,9 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface ModifyConstant {
+public @interface ModifyLoadInstruction {
     String method();
-    int lvIndex() default 0;
+    String loadOpCode();
+    int staticIsnIndex() default 0;
     boolean captureLocals() default false;
 }

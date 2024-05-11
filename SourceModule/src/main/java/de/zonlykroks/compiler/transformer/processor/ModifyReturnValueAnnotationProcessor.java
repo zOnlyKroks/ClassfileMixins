@@ -3,6 +3,7 @@ package de.zonlykroks.compiler.transformer.processor;
 import de.zonlykroks.compiler.annotations.ModifyReturnValue;
 import de.zonlykroks.compiler.transformer.util.TransformerUtils;
 import org.glavo.classfile.*;
+import org.glavo.classfile.instruction.ConstantInstruction;
 import org.glavo.classfile.instruction.FieldInstruction;
 import org.glavo.classfile.instruction.LoadInstruction;
 import org.glavo.classfile.instruction.ReturnInstruction;
@@ -11,18 +12,18 @@ public class ModifyReturnValueAnnotationProcessor extends AbstractAnnotationProc
 
     @Override
     public ClassModel processAnnotation(ModifyReturnValue modifyReturnValue, ClassModel targetModel, ClassModel sourceClassModel, MethodModel sourceMethodModule) {
-        final String targetMethod = modifyReturnValue.method();
-
-        byte[] modified = ClassFile.of().transform(targetModel, ClassTransform.transformingMethodBodies(methodModel -> methodModel.methodName().stringValue().equalsIgnoreCase(targetMethod), new CodeTransform() {
+        byte[] modified = transform(targetModel, getTransformingMethodBodies(modifyReturnValue.method(), new CodeTransform() {
             int currentReturnIndex = 0;
 
             @Override
             public void accept(CodeBuilder codeBuilder, CodeElement codeElement) {
-                if (codeElement instanceof ReturnInstruction) {
-                    if(currentReturnIndex == modifyReturnValue.returnIndex()) {
-                        TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule);
+                checkIfLocalVariable(codeElement);
 
-                        codeBuilder.with(codeElement);
+                if (codeElement instanceof ReturnInstruction returnInstruction) {
+                    if(currentReturnIndex == modifyReturnValue.returnIndex()) {
+                        TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, modifyReturnValue.captureLocals() ? localVariables : null);
+
+                        codeBuilder.returnInstruction(returnInstruction.typeKind());
                     } else {
                         codeBuilder.with(codeElement);
                     }
@@ -35,6 +36,6 @@ public class ModifyReturnValueAnnotationProcessor extends AbstractAnnotationProc
             }
         }));
 
-        return ClassFile.of().parse(modified);
+        return parse(modified);
     }
 }

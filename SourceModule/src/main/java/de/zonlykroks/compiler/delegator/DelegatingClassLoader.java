@@ -11,14 +11,18 @@ import java.nio.file.Files;
 public class DelegatingClassLoader extends ClassLoader{
 
     private final ClassFileTransformerImpl classFileTransformer = new ClassFileTransformerImpl();
+    private final ClassFile classFile = ClassFile.of();
 
     @Override
     protected Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {
-        if(checkIfNoTarget(name)) {
+        String[] split = name.split("\\.");
+        String targetClassName = split[split.length - 1];
+
+        if(checkIfNoTarget(targetClassName)) {
             return super.loadClass(name, resolve);
         }
 
-        if(checkIfMixinTargetClass(name)) {
+        if(checkIfMixinTargetClass(targetClassName)) {
             return defineMixinRelatedClass(name);
         }
 
@@ -32,7 +36,7 @@ public class DelegatingClassLoader extends ClassLoader{
     private Class<?> defineMixinRelatedClass(String name) {
         URL url = Bootstrap.mixinClassLoader.findResource(name.replace(".", "/") + ".class");
 
-        ClassModel model = ClassFile.of().parse(getClassBytes(url));
+        ClassModel model = classFile.parse(getClassBytes(url));
 
         byte[] modified = classFileTransformer.transform(name,model);
 
@@ -42,28 +46,22 @@ public class DelegatingClassLoader extends ClassLoader{
     }
 
     private boolean checkIfNoTarget(String name) {
-        return name.startsWith("java") || name.startsWith("sun") || name.startsWith("jdk") || name.startsWith("com.sun") || name.startsWith("org");
+        return name.startsWith("java") || name.startsWith("sun") || name.startsWith("jdk") || name.startsWith("com.sun") || name.startsWith("org") || name.startsWith("de.zonlykroks.compiler");
     }
 
-    private boolean checkIfMixinTargetClass(String name) {
-        return Bootstrap.mixinAnnotatedClasses.stream().anyMatch(mixinAnnotatedClass -> {
-            String[] split = name.split("\\.");
-
-            return mixinAnnotatedClass.getTargetClassDescriptor().equals(split[split.length - 1]);
-        });
+    private boolean checkIfMixinTargetClass(String splitName) {
+        return Bootstrap.mixinAnnotatedClasses.stream().anyMatch(mixinAnnotatedClass -> mixinAnnotatedClass.getTargetClassDescriptor().equals(splitName));
     }
 
-    private void preDefineDumpClass(String name, byte[] bytes){
+    private void preDefineDumpClass(String splitName, byte[] bytes){
        try {
-           String[] split = name.split("\\.");
-
            File dumpFolder = new File("C:/Users/finnr/IdeaProjects/ClassfileMixins/dump/");
 
            if(!dumpFolder.exists()) {
                dumpFolder.mkdirs();
            }
 
-           File file = new File("C:/Users/finnr/IdeaProjects/ClassfileMixins/dump/" + split[split.length - 1] + ".dump..class");
+           File file = new File("C:/Users/finnr/IdeaProjects/ClassfileMixins/dump/" + splitName + ".class");
 
            if(!file.exists()) file.createNewFile();
 

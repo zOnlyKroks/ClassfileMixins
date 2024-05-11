@@ -7,8 +7,8 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface ModifyConstant {
+public @interface WrapWithCondition {
     String method();
-    int lvIndex() default 0;
-    boolean captureLocals() default false;
+    String invokeIsn();
+    int isnIndex() default 0;
 }

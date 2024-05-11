@@ -9,16 +9,16 @@ public class ModifyConstantAnnotationProcessor extends AbstractAnnotationProcess
 
     @Override
     public ClassModel processAnnotation(ModifyConstant injectAnnotation, ClassModel targetModel, ClassModel sourceClassModel, MethodModel sourceMethodModule) {
-        final String targetMethod = injectAnnotation.method();
-
-        byte[] modified = ClassFile.of().transform(targetModel, ClassTransform.transformingMethodBodies(methodModel -> methodModel.methodName().stringValue().equalsIgnoreCase(targetMethod), new CodeTransform() {
+        byte[] modified = transform(targetModel, getTransformingMethodBodies(injectAnnotation.method(), new CodeTransform() {
             int currentLvIndex = 0;
 
             @Override
             public void accept(CodeBuilder codeBuilder, CodeElement codeElement) {
-                if (codeElement instanceof ConstantInstruction) {
+                checkIfLocalVariable(codeElement);
+
+                if (codeElement instanceof ConstantInstruction constantInstruction) {
                     if(currentLvIndex == injectAnnotation.lvIndex()) {
-                        TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule);
+                        TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, injectAnnotation.captureLocals() ? localVariables : null);
                     }else {
                         codeBuilder.with(codeElement);
                     }
@@ -29,6 +29,6 @@ public class ModifyConstantAnnotationProcessor extends AbstractAnnotationProcess
             }
         }));
 
-        return ClassFile.of().parse(modified);
+        return parse(modified);
     }
 }

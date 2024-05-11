@@ -11,4 +11,5 @@ public @interface Redirect {
     String method();
     String target();
     int methodIndex() default 0;
+    boolean captureLocals() default false;
 }

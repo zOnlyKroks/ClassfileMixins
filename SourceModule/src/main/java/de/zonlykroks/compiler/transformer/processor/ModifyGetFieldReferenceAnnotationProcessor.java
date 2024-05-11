@@ -9,21 +9,22 @@ public class ModifyGetFieldReferenceAnnotationProcessor extends AbstractAnnotati
 
     @Override
     public ClassModel processAnnotation(ModifyGetFieldReference modifyReturnValue, ClassModel targetModel, ClassModel sourceClassModel, MethodModel sourceMethodModule) {
-        final String targetMethod = modifyReturnValue.method();
         final String targetField = modifyReturnValue.field();
         final int isnIndex = modifyReturnValue.staticIsnIndex();
 
-        byte[] modified = ClassFile.of().transform(targetModel, ClassTransform.transformingMethodBodies(methodModel -> methodModel.methodName().stringValue().equalsIgnoreCase(targetMethod), new CodeTransform() {
+        byte[] modified = transform(targetModel, getTransformingMethodBodies(modifyReturnValue.method(), new CodeTransform() {
             int currentReturnIndex = 0;
 
             @Override
             public void accept(CodeBuilder codeBuilder, CodeElement codeElement) {
+                checkIfLocalVariable(codeElement);
+
                if(codeElement instanceof FieldInstruction fieldInstruction) {
                    if(fieldInstruction.opcode() == Opcode.GETSTATIC || fieldInstruction.opcode() == Opcode.GETFIELD) {
                        String fullyQuallifiedIsnField = fieldInstruction.field().owner().name().stringValue() + "." + fieldInstruction.field().name().stringValue() + ":" + fieldInstruction.field().type().stringValue();
 
                        if(fullyQuallifiedIsnField.equals(targetField) && currentReturnIndex == isnIndex) {
-                           TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule);
+                           TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, modifyReturnValue.captureLocal() ? localVariables : null);
                        }else {
                            codeBuilder.with(codeElement);
                        }
@@ -38,6 +39,6 @@ public class ModifyGetFieldReferenceAnnotationProcessor extends AbstractAnnotati
             }
         }));
 
-        return ClassFile.of().parse(modified);
+        return parse(modified);
     }
 }

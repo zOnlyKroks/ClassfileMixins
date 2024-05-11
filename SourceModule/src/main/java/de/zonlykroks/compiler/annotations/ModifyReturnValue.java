@@ -10,4 +10,5 @@ import java.lang.annotation.Target;
 public @interface ModifyReturnValue {
     String method();
     int returnIndex() default 0;
+    boolean captureLocals() default false;
 }
