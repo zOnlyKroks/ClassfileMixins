@@ -21,6 +21,8 @@ public class ModifyReturnValueAnnotationProcessor extends AbstractAnnotationProc
 
                 if (codeElement instanceof ReturnInstruction returnInstruction) {
                     if(currentReturnIndex == modifyReturnValue.returnIndex()) {
+                        codeBuilder.pop();
+
                         TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, modifyReturnValue.captureLocals() ? localVariables : null);
 
                         codeBuilder.returnInstruction(returnInstruction.typeKind());
