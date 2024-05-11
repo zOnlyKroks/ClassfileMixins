@@ -17,20 +17,22 @@ public class ModifyLoadAnnotationProcessor extends AbstractAnnotationProcessor<M
                 checkIfLocalVariable(codeElement);
 
                 if(codeElement instanceof LoadInstruction loadInstruction) {
-                    if(currentIsnIndex == annotation.staticIsnIndex() && loadInstruction.opcode() == Opcode.valueOf(annotation.loadOpCode())) {
-                        int slot = codeBuilder.allocateLocal(loadInstruction.typeKind());
+                    if(loadInstruction.opcode() == Opcode.valueOf(annotation.loadOpCode())) {
+                        if(currentIsnIndex == annotation.staticIsnIndex()) {
+                            int slot = codeBuilder.allocateLocal(loadInstruction.typeKind());
 
-                        TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, annotation.captureLocals() ? localVariables : null);
+                            TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, annotation.captureLocals() ? localVariables : null);
 
-                        codeBuilder.storeInstruction(loadInstruction.typeKind(), slot);
+                            codeBuilder.storeInstruction(loadInstruction.typeKind(), slot);
 
-                        codeBuilder.loadInstruction(loadInstruction.typeKind(), slot);
-                    }else {
-                        codeBuilder.with(codeElement);
+                            codeBuilder.loadInstruction(loadInstruction.typeKind(), slot);
+                        }else {
+                            codeBuilder.with(codeElement);
+                        }
+
+                        currentIsnIndex++;
+                        return;
                     }
-
-                    currentIsnIndex++;
-                    return;
                 }
 
                 codeBuilder.with(codeElement);

@@ -7,24 +7,21 @@ public class Main {
         System.out.println("Hello World!");
         Main main = new Main();
 
-        main.injectIntoMe();
-        System.out.println(main.testOutput());
+        main.injectIntoMe(420);
     }
 
-    public void injectIntoMe() {
+    public void injectIntoMe(int x) {
         final PrintStream printStream = System.out;
         printStream.println("A");
         printStream.println("B");
         printStream.println("C");
         printStream.println(modifyMyReturnValue());
+
+        print(x);
     }
 
-    public int testOutput() {
-        if(System.currentTimeMillis() == 0) {
-            return 1;
-        }
-
-        return 2;
+    private void print(int x) {
+        System.out.println(x);
     }
 
     public int modifyMyReturnValue() {

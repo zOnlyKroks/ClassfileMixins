@@ -10,7 +10,7 @@ public class ExampleMixin implements DummyInterface{
 
     @ModifyGetFieldReference(method = "injectIntoMe", field = "java/lang/System.out:Ljava/io/PrintStream;", staticIsnIndex = 0)
     public PrintStream modifyPrintStream() {
-        return System.err;
+        return new PrintStreamImpl(System.out);
     }
 
     @Redirect(method = "injectIntoMe", target = "java/io/PrintStream.println:(Ljava/lang/String;)V",methodIndex = 0)
@@ -18,22 +18,25 @@ public class ExampleMixin implements DummyInterface{
         System.out.println("A + 1");
     }
 
-    @ModifyLoadInstruction(method = "injectIntoMe", loadOpCode = "ALOAD_1", staticIsnIndex = 3)
-    public PrintStream changeMethodHandle() {
+    @ModifyReturnValue(method = "modifyMyReturnValue", returnIndex = 0)
+    public int modifyReturnValue2() {
+        return 69420;
+    }
+
+    @ModifyLoadInstruction(method = "injectIntoMe", loadOpCode = "ALOAD_2", staticIsnIndex = 1)
+    public PrintStream modifyReceiver() {
         return new PrintStreamImpl(System.out);
     }
 
-    @ModifyReturnValue(method = "testOutput", returnIndex = 0)
-    public int modifyReturnValue2() {
-        return 69420;
+    @ModifyLoadInstruction(method = "injectIntoMe", loadOpCode = "ILOAD_1")
+    public int changeInvokeParam() {
+        return 69;
     }
 
     public static class PrintStreamImpl extends PrintStream{
 
         public PrintStreamImpl(OutputStream out) {
             super(out);
-
-            System.out.println("A");
         }
     }
 
