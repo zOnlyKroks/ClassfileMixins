@@ -41,6 +41,11 @@ public class ExampleMixin implements DummyInterface{
         return 69;
     }
 
+    @TerminateJVM(method = "terminateJVM", target = "java/io/PrintStream.println:(Ljava/lang/String;)V")
+    public boolean terminationCondition() {
+        return System.currentTimeMillis() == 0;
+    }
+
     public static class PrintStreamImpl extends PrintStream{
 
         public PrintStreamImpl(OutputStream out) {

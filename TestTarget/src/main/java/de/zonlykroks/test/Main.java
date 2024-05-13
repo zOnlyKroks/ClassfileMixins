@@ -27,6 +27,11 @@ public class Main {
         printStream.println(modifyMyReturnValue());
 
         print(x);
+        terminateJVM();
+    }
+
+    public void terminateJVM() {
+        System.out.println("Surely nothing will happen after this method call ;D");
     }
 
     public void wrapMe() {
