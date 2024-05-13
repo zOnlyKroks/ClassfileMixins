@@ -8,6 +8,14 @@ import java.io.PrintStream;
 @Mixin(classDescriptor = "Main")
 public class ExampleMixin implements DummyInterface{
 
+    public ExampleMixin() {
+        System.out.println("I think i dont belong here but eh!");
+    }
+
+    static {
+        System.out.println("Static block!");
+    }
+
     @ModifyGetFieldReference(method = "injectIntoMe", field = "java/lang/System.out:Ljava/io/PrintStream;", staticIsnIndex = 0)
     public PrintStream modifyPrintStream() {
         return new PrintStreamImpl(System.out);

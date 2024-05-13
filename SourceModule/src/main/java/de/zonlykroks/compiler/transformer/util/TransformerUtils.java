@@ -2,12 +2,14 @@ package de.zonlykroks.compiler.transformer.util;
 
 import org.glavo.classfile.*;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.lang.constant.ClassDesc;
 import java.util.Map;
 
 public class TransformerUtils {
 
-    public static void invokeVirtualSourceMethod(CodeBuilder builder, ClassModel targetModel, MethodModel sourceMethodModule) {
+    public static void invokeVirtualSourceMethod(@Nonnull CodeBuilder builder, @Nonnull ClassModel targetModel, @Nonnull MethodModel sourceMethodModule) {
         boolean isStatic = sourceMethodModule.flags().has(AccessFlag.STATIC);
 
         if (!isStatic) {
@@ -17,7 +19,7 @@ public class TransformerUtils {
         builder.invokevirtual(ClassDesc.of(targetModel.thisClass().name().stringValue().replace("/", ".")), sourceMethodModule.methodName().stringValue(), sourceMethodModule.methodTypeSymbol());
     }
 
-    public static void invokeVirtualSourceMethod(CodeBuilder builder, ClassModel targetModel, MethodModel sourceMethodModule, Map<Integer, TypeKind> localVariables) {
+    public static void invokeVirtualSourceMethod(@Nonnull CodeBuilder builder, @Nonnull ClassModel targetModel, @Nonnull MethodModel sourceMethodModule, @Nullable Map<Integer, TypeKind> localVariables) {
         if(localVariables == null) {
             invokeVirtualSourceMethod(builder, targetModel, sourceMethodModule);
             return;
@@ -41,5 +43,13 @@ public class TransformerUtils {
         }
 
         builder.invokevirtual(ClassDesc.of(targetModel.thisClass().name().stringValue().replace("/", ".")), sourceMethodModule.methodName().stringValue(), sourceMethodModule.methodTypeSymbol());
+    }
+
+    public static ClassTransform getTransformingMethodBodies(String annotationTargetMethodName, CodeTransform codeTransform) {
+        return ClassTransform.transformingMethodBodies(methodModel -> getMethodModelPredicate(methodModel, annotationTargetMethodName), codeTransform);
+    }
+
+    private static boolean getMethodModelPredicate(MethodModel targetMethodModel, String annotationTargetMethodName) {
+        return targetMethodModel.methodName().stringValue().equalsIgnoreCase(annotationTargetMethodName);
     }
 }

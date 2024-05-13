@@ -3,11 +3,20 @@ package de.zonlykroks.test;
 import java.io.PrintStream;
 public class Main {
 
+    public Main() {
+        System.out.println("Not so merged constructor call!");
+    }
+
+    static {
+        System.out.println("Static block that was already there");
+    }
+
     public static void main(String[] args) {
         System.out.println("Hello World!");
         Main main = new Main();
 
         main.injectIntoMe(420);
+        main.wrapMe();
     }
 
     public void injectIntoMe(int x) {
@@ -18,6 +27,10 @@ public class Main {
         printStream.println(modifyMyReturnValue());
 
         print(x);
+    }
+
+    public void wrapMe() {
+        System.out.println("I am wrapped!");
     }
 
     private void print(int x) {

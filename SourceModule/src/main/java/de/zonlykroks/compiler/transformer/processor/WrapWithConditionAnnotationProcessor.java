@@ -20,21 +20,25 @@ public class WrapWithConditionAnnotationProcessor extends AbstractAnnotationProc
             @Override
             public void accept(CodeBuilder codeBuilder, CodeElement codeElement) {
                if(codeElement instanceof InvokeInstruction invokeInstruction) {
-                   if(invokeInstruction.name().stringValue().equalsIgnoreCase(annotation.invokeIsn()) && currentInvokeIndex == annotation.isnIndex()) {
-                       Label stopLabel = codeBuilder.newLabel();
+                   if(currentInvokeIndex == annotation.isnIndex()) {
+                       if(invokeInstruction.name().stringValue().equalsIgnoreCase(annotation.invokeIsn())) {
+                           Label stopLabel = codeBuilder.newLabel();
 
-                       TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule);
-                       codeBuilder.ifeq(stopLabel);
+                           TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule);
+                           codeBuilder.ifeq(stopLabel);
 
-                       for (Instruction instruction : instructionListSinceLastInvoke) {
-                           codeBuilder.with(instruction);
+                           for (Instruction instruction : instructionListSinceLastInvoke) {
+                               codeBuilder.with(instruction);
+                           }
+
+                           codeBuilder.invokevirtual(invokeInstruction.owner().asSymbol(),invokeInstruction.name().stringValue(), invokeInstruction.typeSymbol());
+
+                           codeBuilder.labelBinding(stopLabel);
+                       }else {
+                           codeBuilder.with(codeElement);
                        }
-
-                       codeBuilder.invokevirtual(invokeInstruction.owner().asSymbol(),invokeInstruction.name().stringValue(), invokeInstruction.typeSymbol());
-
-                       codeBuilder.labelBinding(stopLabel);
                    }else {
-                       codeBuilder.with(codeElement);
+                          codeBuilder.with(codeElement);
                    }
 
                    instructionListSinceLastInvoke.clear();
