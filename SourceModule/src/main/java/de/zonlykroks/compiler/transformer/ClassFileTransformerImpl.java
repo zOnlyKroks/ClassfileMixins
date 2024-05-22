@@ -6,6 +6,7 @@ import de.zonlykroks.compiler.scanner.util.MixinAnnotatedClass;
 import de.zonlykroks.compiler.transformer.processor.*;
 import de.zonlykroks.compiler.transformer.util.TransformerUtils;
 import org.glavo.classfile.*;
+import org.glavo.classfile.attribute.ConstantValueAttribute;
 import org.glavo.classfile.constantpool.ClassEntry;
 import org.glavo.classfile.instruction.InvokeInstruction;
 import org.glavo.classfile.instruction.ReturnInstruction;
@@ -15,6 +16,7 @@ import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import static de.zonlykroks.compiler.delegator.DelegatingClassLoader.getClassBytes;
@@ -40,6 +42,7 @@ public class ClassFileTransformerImpl {
     private final ModifyLoadAnnotationProcessor ModifyLoadAnnotationProcessor = new ModifyLoadAnnotationProcessor();
     private final WrapWithConditionAnnotationProcessor WrapWithConditionAnnotationProcessor = new WrapWithConditionAnnotationProcessor();
     private final TerminateJVMAnnotationProcessor TerminateJVMAnnotationProcessor = new TerminateJVMAnnotationProcessor();
+    private final ModifyStoreInstructionProcessor ModifyStoreInstructionProcessor = new ModifyStoreInstructionProcessor();
 
     public byte[] transform(String targetClassName, ClassModel targetModel) {
         String[] split = targetClassName.split("\\.");
@@ -78,6 +81,7 @@ public class ClassFileTransformerImpl {
                     case ModifyLoadInstruction modifyLoad -> targetModel = ModifyLoadAnnotationProcessor.processAnnotation(modifyLoad, targetModel, transformerModel, model);
                     case WrapWithCondition wrapWithCondition -> targetModel = WrapWithConditionAnnotationProcessor.processAnnotation(wrapWithCondition, targetModel, transformerModel, model);
                     case TerminateJVM terminateJVM -> targetModel = TerminateJVMAnnotationProcessor.processAnnotation(terminateJVM, targetModel, transformerModel, model);
+                    case ModifyStoreInstruction modifyStoreInstruction -> targetModel = ModifyStoreInstructionProcessor.processAnnotation(modifyStoreInstruction, targetModel, transformerModel, model);
                     default -> {
                         //Nothing bad ever happens to the kennedies
                     }

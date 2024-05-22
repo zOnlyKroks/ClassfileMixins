@@ -1,6 +1,7 @@
 package de.zonlykroks.impl;
 
 import de.zonlykroks.compiler.annotations.*;
+import de.zonlykroks.test.Main;
 
 import java.io.OutputStream;
 import java.io.PrintStream;
@@ -43,7 +44,7 @@ public class ExampleMixin implements DummyInterface{
 
     @TerminateJVM(method = "terminateJVM", target = "java/io/PrintStream.println:(Ljava/lang/String;)V")
     public boolean terminationCondition() {
-        return System.currentTimeMillis() == 0;
+        return true;
     }
 
     public static class PrintStreamImpl extends PrintStream{

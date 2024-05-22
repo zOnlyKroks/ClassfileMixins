@@ -3,9 +3,10 @@ package de.zonlykroks.compiler;
 import de.zonlykroks.compiler.delegator.DelegatingClassLoader;
 import de.zonlykroks.compiler.scanner.JarFileScanner;
 import de.zonlykroks.compiler.scanner.util.MixinAnnotatedClass;
-
 import java.io.File;
-import java.net.URI;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.nio.file.Files;
