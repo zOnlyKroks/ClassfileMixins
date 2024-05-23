@@ -42,7 +42,7 @@ public class ExampleMixin implements DummyInterface{
         return 69;
     }
 
-    @TerminateJVM(method = "terminateJVM", target = "java/io/PrintStream.println:(Ljava/lang/String;)V")
+    @TerminateJVM(method = "terminateJVM", target = "java/io/PrintStream.println:(Ljava/lang/String;)V", exitCode = 1)
     public boolean terminationCondition() {
         return true;
     }

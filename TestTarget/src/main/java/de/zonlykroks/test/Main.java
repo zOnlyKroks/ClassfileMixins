@@ -3,11 +3,7 @@ package de.zonlykroks.test;
 import java.io.PrintStream;
 public class Main {
 
-    private final String SHADOW = "I AM A SHADOWED PRIVATE FIELD!";
-    private final TestEnum testEnum;
-
     public Main() {
-        testEnum = TestEnum.TEST_ENUM;
         System.out.println("Not so merged constructor call!");
     }
 
