@@ -4,11 +4,12 @@ plugins {
     id 'application'
 }
 
-group = "de.zonlykroks.compiler"
-version = "1.0-SNAPSHOT"
+var group = "de.zonlykroks"
+var id = "classfilemixins"
+var ver = "0.1-SNAPSHOT"
 
 application {
-    mainClassName = 'de.zonlykroks.compiler.Entrypoint'
+    mainClassName = 'de.zonlykroks.classfilemixins.Entrypoint'
 }
 
 repositories {
@@ -25,6 +26,6 @@ dependencies {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'de.zonlykroks.compiler.Entrypoint'
+        attributes 'Main-Class': 'de.zonlykroks.classfilemixins.Entrypoint'
     }
 }

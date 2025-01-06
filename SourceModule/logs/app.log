@@ -7,8 +7,8 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:59) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:59) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 11:52:20.526 [main] INFO  ClassfileMixin - Bootstrapping...
 11:52:20.565 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 11:52:20.565 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
@@ -18,8 +18,8 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 11:53:18.391 [main] INFO  ClassfileMixin - Bootstrapping...
 11:53:18.428 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 11:53:18.429 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
@@ -29,8 +29,8 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 11:54:23.860 [main] INFO  ClassfileMixin - Bootstrapping...
 11:54:23.893 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 11:54:23.894 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
@@ -40,8 +40,8 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 11:54:46.006 [main] INFO  ClassfileMixin - Bootstrapping...
 11:54:46.042 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 11:54:46.043 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
@@ -51,8 +51,8 @@ java.lang.ClassNotFoundException:  HelloWorld.class
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 11:55:25.842 [main] INFO  ClassfileMixin - Bootstrapping...
 11:55:25.878 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 11:55:25.878 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
@@ -62,8 +62,8 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 11:55:29.031 [main] INFO  ClassfileMixin - Bootstrapping...
 11:55:29.067 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 11:55:29.068 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
@@ -73,8 +73,8 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 11:56:30.693 [main] INFO  ClassfileMixin - Bootstrapping...
 11:56:30.726 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 11:56:30.727 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
@@ -84,8 +84,8 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 11:57:05.469 [main] INFO  ClassfileMixin - Bootstrapping...
 11:57:05.507 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 11:57:05.508 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
@@ -95,8 +95,8 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 11:57:23.042 [main] INFO  ClassfileMixin - Bootstrapping...
 11:57:23.074 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 11:57:23.075 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
@@ -106,8 +106,8 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 11:57:37.213 [main] INFO  ClassfileMixin - Bootstrapping...
 11:57:37.253 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 11:57:37.253 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
@@ -117,8 +117,8 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 11:57:47.425 [main] INFO  ClassfileMixin - Bootstrapping...
 11:57:47.461 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 11:57:47.461 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
@@ -128,8 +128,8 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 11:58:52.660 [main] INFO  ClassfileMixin - Bootstrapping...
 11:58:52.692 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 11:58:52.693 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
@@ -139,8 +139,8 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 11:59:30.032 [main] INFO  ClassfileMixin - Bootstrapping...
 11:59:30.065 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 11:59:30.066 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
@@ -150,8 +150,8 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 11:59:43.489 [main] INFO  ClassfileMixin - Bootstrapping...
 11:59:43.530 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 11:59:43.530 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
@@ -161,8 +161,8 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 11:59:59.775 [main] INFO  ClassfileMixin - Bootstrapping...
 11:59:59.809 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 11:59:59.810 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
@@ -172,71 +172,71 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:00:43.069 [main] INFO  ClassfileMixin - Bootstrapping...
 12:00:43.108 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:00:43.108 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:00:43.146 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:00:43.146 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:00:43.146 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:59) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:59) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:01:17.887 [main] INFO  ClassfileMixin - Bootstrapping...
 12:01:17.921 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:01:17.922 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:01:17.955 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.ExampleMixin
+12:01:17.955 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.ExampleMixin
 12:01:17.957 [main] INFO  ClassfileMixin - Loading class: java.lang.Object
-12:01:17.957 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.annotations.Mixin
-12:01:17.958 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:01:17.957 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.annotations.Mixin
+12:01:17.958 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:01:17.958 [main] INFO  ClassfileMixin - Loading class:  HelloWorld
 12:01:17.959 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:59) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:59) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:02:14.853 [main] INFO  ClassfileMixin - Bootstrapping...
 12:02:14.888 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:02:14.889 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:02:14.923 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.ExampleMixin
+12:02:14.923 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.ExampleMixin
 12:02:14.925 [main] INFO  ClassfileMixin - Loading class: java.lang.Object
-12:02:14.925 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.annotations.Mixin
-12:02:14.926 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:02:14.925 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.annotations.Mixin
+12:02:14.926 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:02:14.927 [main] INFO  ClassfileMixin - Loading class:  HelloWorld
 12:02:14.928 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:02:25.832 [main] INFO  ClassfileMixin - Bootstrapping...
 12:02:25.868 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:02:25.868 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:02:25.908 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.ExampleMixin
+12:02:25.908 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.ExampleMixin
 12:02:25.911 [main] INFO  ClassfileMixin - Loading class: java.lang.Object
-12:02:25.911 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.annotations.Mixin
-12:02:25.912 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:02:25.911 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.annotations.Mixin
+12:02:25.912 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:02:25.913 [main] INFO  ClassfileMixin - Loading class:  HelloWorld
 12:02:25.914 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:03:34.877 [main] INFO  ClassfileMixin - Bootstrapping...
 12:03:34.909 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:03:34.910 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:03:34.943 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.ExampleMixin
+12:03:34.943 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.ExampleMixin
 12:03:34.944 [main] INFO  ClassfileMixin - Loading class: java.lang.Object
-12:03:34.945 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.annotations.Mixin
-12:03:34.946 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:03:34.945 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.annotations.Mixin
+12:03:34.946 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:03:34.946 [main] INFO  ClassfileMixin - Searching for bootstrap class:  HelloWorld in URLs [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/helloworld.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar]
 12:03:34.946 [main] INFO  ClassfileMixin - Loading class:  HelloWorld
 12:03:34.946 [main] ERROR ClassfileMixin - Failed to bootstrap
@@ -244,15 +244,15 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:03:53.099 [main] INFO  ClassfileMixin - Bootstrapping...
 12:03:53.132 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:03:53.133 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:03:53.166 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.ExampleMixin
+12:03:53.166 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.ExampleMixin
 12:03:53.168 [main] INFO  ClassfileMixin - Loading class: java.lang.Object
-12:03:53.169 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.annotations.Mixin
-12:03:53.169 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:03:53.169 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.annotations.Mixin
+12:03:53.169 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:03:53.169 [main] INFO  ClassfileMixin - Searching for bootstrap class  HelloWorld in URLs [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/helloworld.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar]
 12:03:53.170 [main] INFO  ClassfileMixin - Loading class:  HelloWorld
 12:03:53.170 [main] ERROR ClassfileMixin - Failed to bootstrap
@@ -260,15 +260,15 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:03:59.319 [main] INFO  ClassfileMixin - Bootstrapping...
 12:03:59.355 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:03:59.356 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:03:59.388 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.ExampleMixin
+12:03:59.388 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.ExampleMixin
 12:03:59.391 [main] INFO  ClassfileMixin - Loading class: java.lang.Object
-12:03:59.391 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.annotations.Mixin
-12:03:59.392 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:03:59.391 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.annotations.Mixin
+12:03:59.392 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:03:59.392 [main] INFO  ClassfileMixin - Searching for bootstrap class  HelloWorld in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/helloworld.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar]
 12:03:59.393 [main] INFO  ClassfileMixin - Loading class:  HelloWorld
 12:03:59.393 [main] ERROR ClassfileMixin - Failed to bootstrap
@@ -276,15 +276,15 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:05:04.399 [main] INFO  ClassfileMixin - Bootstrapping...
 12:05:04.433 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:05:04.433 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:05:04.466 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.ExampleMixin
+12:05:04.466 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.ExampleMixin
 12:05:04.469 [main] INFO  ClassfileMixin - Loading class: java.lang.Object
-12:05:04.469 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.annotations.Mixin
-12:05:04.470 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:05:04.469 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.annotations.Mixin
+12:05:04.470 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:05:04.470 [main] INFO  ClassfileMixin - Searching for bootstrap class  HelloWorld in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/helloworld.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar]
 12:05:04.470 [main] INFO  ClassfileMixin - Loading class:  HelloWorld
 12:05:04.471 [main] ERROR ClassfileMixin - Failed to bootstrap
@@ -292,15 +292,15 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:05:26.224 [main] INFO  ClassfileMixin - Bootstrapping...
 12:05:26.259 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:05:26.259 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:05:26.293 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.ExampleMixin
+12:05:26.293 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.ExampleMixin
 12:05:26.295 [main] INFO  ClassfileMixin - Loading class: java.lang.Object
-12:05:26.296 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.annotations.Mixin
-12:05:26.297 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:05:26.296 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.annotations.Mixin
+12:05:26.297 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:05:26.297 [main] INFO  ClassfileMixin - Searching for bootstrap class  HelloWorld in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/helloworld.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar]
 12:05:26.297 [main] INFO  ClassfileMixin - Loading class:  HelloWorld
 12:05:26.297 [main] ERROR ClassfileMixin - Failed to bootstrap
@@ -308,15 +308,15 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:12:39.763 [main] INFO  ClassfileMixin - Bootstrapping...
 12:12:39.803 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:12:39.804 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:12:39.840 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.ExampleMixin
+12:12:39.840 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.ExampleMixin
 12:12:39.842 [main] INFO  ClassfileMixin - Loading class: java.lang.Object
-12:12:39.842 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.annotations.Mixin
-12:12:39.843 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:12:39.842 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.annotations.Mixin
+12:12:39.843 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:12:39.843 [main] INFO  ClassfileMixin - Searching for bootstrap class  HelloWorld in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/helloworld.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar]
 12:12:39.843 [main] INFO  ClassfileMixin - Loading class:  HelloWorld
 12:12:39.844 [main] ERROR ClassfileMixin - Failed to bootstrap
@@ -324,19 +324,19 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:18:57.964 [main] INFO  ClassfileMixin - Bootstrapping...
 12:18:57.998 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:18:57.998 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:18:58.031 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.ExampleMixin
+12:18:58.031 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.ExampleMixin
 12:20:24.544 [main] INFO  ClassfileMixin - Bootstrapping...
 12:20:24.577 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:20:24.578 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:20:24.612 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.ExampleMixin
+12:20:24.612 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.ExampleMixin
 12:20:24.615 [main] INFO  ClassfileMixin - Loading class: java.lang.Object
-12:20:24.616 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.compiler.annotations.Mixin
-12:20:24.617 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:20:24.616 [main] INFO  ClassfileMixin - Loading class: de.zonlykroks.classfilemixins.annotations.Mixin
+12:20:24.617 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:20:24.617 [main] INFO  ClassfileMixin - Searching for bootstrap class  HelloWorld in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/helloworld.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar]
 12:20:24.617 [main] INFO  ClassfileMixin - Loading class:  HelloWorld
 12:20:24.617 [main] ERROR ClassfileMixin - Failed to bootstrap
@@ -344,12 +344,12 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:24:32.327 [main] INFO  ClassfileMixin - Bootstrapping...
 12:24:32.360 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:24:32.362 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:24:32.399 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:24:32.399 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:24:32.399 [main] INFO  ClassfileMixin - Searching for bootstrap class  HelloWorld in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/helloworld.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar]
 12:24:32.399 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException:  HelloWorld
@@ -359,12 +359,12 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:24:49.773 [main] INFO  ClassfileMixin - Bootstrapping...
 12:24:49.804 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:24:49.805 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:24:49.839 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:24:49.839 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:24:49.839 [main] INFO  ClassfileMixin - Searching for bootstrap class  HelloWorld in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/helloworld.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar]
 12:24:49.840 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException:  HelloWorld
@@ -374,12 +374,12 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:25:34.821 [main] INFO  ClassfileMixin - Bootstrapping...
 12:25:34.854 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:25:34.855 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:25:34.891 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:25:34.891 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:25:34.892 [main] INFO  ClassfileMixin - Searching for bootstrap class  HelloWorld in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/helloworld.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar]
 12:25:34.892 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException:  HelloWorld
@@ -389,12 +389,12 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:26:19.195 [main] INFO  ClassfileMixin - Bootstrapping...
 12:26:19.236 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:26:19.236 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:26:19.272 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:26:19.272 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:26:19.272 [main] INFO  ClassfileMixin - Searching for bootstrap class  HelloWorld in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/helloworld.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar]
 12:26:19.272 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException:  HelloWorld
@@ -404,12 +404,12 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:69) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:69) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:28:24.070 [main] INFO  ClassfileMixin - Bootstrapping...
 12:28:24.114 [main] INFO  ClassfileMixin - Adding helloworld.jar to classpath
 12:28:24.115 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
-12:28:24.153 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:28:24.153 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:28:24.153 [main] INFO  ClassfileMixin - Searching for bootstrap class  HelloWorld in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/helloworld.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar]
 12:28:24.154 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException:  HelloWorld
@@ -419,12 +419,12 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:34:01.797 [main] INFO  ClassfileMixin - Bootstrapping...
 12:34:01.829 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
 12:34:01.830 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
-12:34:01.867 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:34:01.867 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:34:01.867 [main] INFO  ClassfileMixin - Searching for bootstrap class  HelloWorld in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 12:34:01.868 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException:  HelloWorld
@@ -434,12 +434,12 @@ java.lang.ClassNotFoundException:  HelloWorld
 	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:34:58.494 [main] INFO  ClassfileMixin - Bootstrapping...
 12:34:58.528 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
 12:34:58.528 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
-12:34:58.564 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:34:58.564 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:34:58.565 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 12:34:58.565 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException:  de.zonlykroks.test.Main
@@ -449,12 +449,12 @@ java.lang.ClassNotFoundException:  de.zonlykroks.test.Main
 	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:36:11.137 [main] INFO  ClassfileMixin - Bootstrapping...
 12:36:11.172 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
 12:36:11.173 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
-12:36:11.212 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=null}]
+12:36:11.212 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=null}]
 12:36:11.212 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 12:36:11.212 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException:  de.zonlykroks.test.Main
@@ -464,12 +464,12 @@ java.lang.ClassNotFoundException:  de.zonlykroks.test.Main
 	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 12:58:48.047 [main] INFO  ClassfileMixin - Bootstrapping...
 12:58:48.079 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
 12:58:48.081 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
-12:58:48.119 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+12:58:48.119 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 12:58:48.120 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 12:58:48.120 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException:  de.zonlykroks.test.Main
@@ -479,12 +479,12 @@ java.lang.ClassNotFoundException:  de.zonlykroks.test.Main
 	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 13:05:54.884 [main] INFO  ClassfileMixin - Bootstrapping...
 13:05:54.918 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
 13:05:54.918 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
-13:05:54.958 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+13:05:54.958 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 13:05:54.958 [main] INFO  ClassfileMixin - Searching for bootstrap class  src.main.java.de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 13:05:54.959 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException:  src.main.java.de.zonlykroks.test.Main
@@ -494,12 +494,12 @@ java.lang.ClassNotFoundException:  src.main.java.de.zonlykroks.test.Main
 	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:60) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 13:56:32.850 [main] INFO  ClassfileMixin - Bootstrapping...
 13:56:32.883 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
 13:56:32.884 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
-13:56:32.923 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+13:56:32.923 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 13:56:32.923 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 13:56:32.924 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.NullPointerException: null
@@ -513,12 +513,12 @@ java.lang.NullPointerException: null
 	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
 	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 13:57:46.737 [main] INFO  ClassfileMixin - Bootstrapping...
 13:57:46.775 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
 13:57:46.776 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
-13:57:46.815 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+13:57:46.815 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 13:57:46.816 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 13:57:46.816 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.NullPointerException: null
@@ -532,12 +532,12 @@ java.lang.NullPointerException: null
 	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
 	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:64) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:64) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 14:07:17.180 [main] INFO  ClassfileMixin - Bootstrapping...
 14:07:17.214 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
 14:07:17.215 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
-14:07:17.253 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:07:17.253 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 14:07:17.253 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main.class in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 14:07:17.253 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.NullPointerException: null
@@ -551,12 +551,12 @@ java.lang.NullPointerException: null
 	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
 	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 14:07:31.881 [main] INFO  ClassfileMixin - Bootstrapping...
 14:07:31.916 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
 14:07:31.916 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
-14:07:31.957 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:07:31.957 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 14:07:31.957 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main.java in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 14:07:31.958 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.NullPointerException: null
@@ -570,12 +570,12 @@ java.lang.NullPointerException: null
 	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
 	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 14:07:43.659 [main] INFO  ClassfileMixin - Bootstrapping...
 14:07:43.701 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
 14:07:43.703 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
-14:07:43.746 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:07:43.746 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 14:07:43.746 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 14:07:43.747 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.NullPointerException: null
@@ -589,12 +589,12 @@ java.lang.NullPointerException: null
 	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
 	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 14:13:19.355 [main] INFO  ClassfileMixin - Bootstrapping...
 14:13:19.393 [main] INFO  ClassfileMixin - Adding \Users\finnr\IdeaProjects\ClassfileMixins\target\TestImpl-1.0-SNAPSHOT.jar to classpath
 14:13:19.394 [main] INFO  ClassfileMixin - Adding \Users\finnr\IdeaProjects\ClassfileMixins\target\TestTarget-1.0-SNAPSHOT.jar to classpath
-14:13:19.437 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:13:19.437 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 14:13:19.437 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 14:13:19.438 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.NullPointerException: null
@@ -608,12 +608,12 @@ java.lang.NullPointerException: null
 	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
 	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 14:14:01.553 [main] INFO  ClassfileMixin - Bootstrapping...
 14:14:01.588 [main] INFO  ClassfileMixin - Adding C:\Users\finnr\IdeaProjects\ClassfileMixins\target\TestImpl-1.0-SNAPSHOT.jar to classpath
 14:14:01.589 [main] INFO  ClassfileMixin - Adding C:\Users\finnr\IdeaProjects\ClassfileMixins\target\TestTarget-1.0-SNAPSHOT.jar to classpath
-14:14:01.627 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:14:01.627 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 14:14:01.627 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 14:14:01.628 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.NullPointerException: null
@@ -627,12 +627,12 @@ java.lang.NullPointerException: null
 	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
 	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:62) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 14:15:30.382 [main] INFO  ClassfileMixin - Bootstrapping...
 14:15:30.417 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
 14:15:30.418 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
-14:15:30.458 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:15:30.458 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 14:15:30.458 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 14:15:30.459 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.NullPointerException: null
@@ -646,12 +646,12 @@ java.lang.NullPointerException: null
 	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
 	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:64) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:64) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 14:15:57.507 [main] INFO  ClassfileMixin - Bootstrapping...
 14:15:57.543 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
 14:15:57.543 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
-14:15:57.584 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:15:57.584 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 14:15:57.585 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 14:15:57.585 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.NullPointerException: null
@@ -665,12 +665,12 @@ java.lang.NullPointerException: null
 	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
 	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:66) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:66) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 14:16:06.098 [main] INFO  ClassfileMixin - Bootstrapping...
 14:16:06.138 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
 14:16:06.139 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
-14:16:06.179 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:16:06.179 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 14:16:06.179 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 14:16:06.180 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.NullPointerException: null
@@ -684,12 +684,12 @@ java.lang.NullPointerException: null
 	at java.base/java.net.URLClassLoader$5.run(URLClassLoader.java:803) ~[?:?]
 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
 	at java.base/java.net.URLClassLoader.newInstance(URLClassLoader.java:802) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:63) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:63) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 14:43:11.335 [main] INFO  ClassfileMixin - Bootstrapping...
 14:43:11.372 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
 14:43:11.373 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
-14:43:11.407 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:43:11.407 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 14:43:11.408 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 14:43:11.408 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException:  de.zonlykroks.test.Main
@@ -699,12 +699,12 @@ java.lang.ClassNotFoundException:  de.zonlykroks.test.Main
 	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:59) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:59) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 14:44:28.044 [main] INFO  ClassfileMixin - Bootstrapping...
 14:44:28.082 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
 14:44:28.082 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
-14:44:28.120 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:44:28.120 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 14:44:28.121 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 14:44:28.121 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException:  de.zonlykroks.test.Main
@@ -714,12 +714,12 @@ java.lang.ClassNotFoundException:  de.zonlykroks.test.Main
 	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]
 14:44:40.062 [main] INFO  ClassfileMixin - Bootstrapping...
 14:44:40.095 [main] INFO  ClassfileMixin - Adding TestImpl-1.0-SNAPSHOT.jar to classpath
 14:44:40.095 [main] INFO  ClassfileMixin - Adding TestTarget-1.0-SNAPSHOT.jar to classpath
-14:44:40.130 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.compiler.ExampleMixin, mixin=@de.zonlykroks.compiler.annotations.Mixin(classDescriptor="HelloWorld")}]
+14:44:40.130 [main] INFO  ClassfileMixin - Collected Mixin Classes: [MixinAnnotatedClass{mixinClazz=class de.zonlykroks.classfilemixins.ExampleMixin, mixin=@de.zonlykroks.classfilemixins.annotations.Mixin(classDescriptor="HelloWorld")}]
 14:44:40.130 [main] INFO  ClassfileMixin - Searching for bootstrap class  de.zonlykroks.test.Main in URLs: [file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestImpl-1.0-SNAPSHOT.jar, file:/C:/Users/finnr/IdeaProjects/ClassfileMixins/target/TestTarget-1.0-SNAPSHOT.jar]
 14:44:40.131 [main] ERROR ClassfileMixin - Failed to bootstrap
 java.lang.ClassNotFoundException: Main
@@ -729,5 +729,5 @@ java.lang.ClassNotFoundException: Main
 	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
 	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
-	at de.zonlykroks.compiler.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
-	at de.zonlykroks.compiler.Entrypoint.main(Entrypoint.java:38) [main/:?]
+	at de.zonlykroks.classfilemixins.Bootstrap.finalizeLaunch(Bootstrap.java:61) [main/:?]
+	at de.zonlykroks.classfilemixins.Entrypoint.main(Entrypoint.java:38) [main/:?]

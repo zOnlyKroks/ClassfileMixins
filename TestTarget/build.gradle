@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-group = "de.zonlykroks.compiler"
+group = "de.zonlykroks.classfilemixins"
 version = "1.0-SNAPSHOT"
 
 repositories {

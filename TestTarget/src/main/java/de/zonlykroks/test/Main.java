@@ -1,6 +1,8 @@
 package de.zonlykroks.test;
 
 import java.io.PrintStream;
+import java.util.Random;
+
 public class Main {
 
     public Main() {
@@ -15,8 +17,26 @@ public class Main {
         System.out.println("Hello World!");
         Main main = new Main();
 
+        main.mcSwitch();
+
         main.injectIntoMe(420);
         main.wrapMe();
+    }
+
+    public void mcSwitch() {
+        Random random = new Random();
+        switch (random.nextInt()) {
+            case 0:
+                System.out.println("0");
+                break;
+            case 1:
+                System.out.println("1");
+                break;
+            default:
+                System.out.println("default");
+        }
+
+        System.out.println("Switch ende");
     }
 
     public void injectIntoMe(int x) {
@@ -27,11 +47,6 @@ public class Main {
         printStream.println(modifyMyReturnValue());
 
         print(x);
-        terminateJVM();
-    }
-
-    public void terminateJVM() {
-        System.out.println("Surely nothing will happen after this method call ;D");
     }
 
     public void wrapMe() {

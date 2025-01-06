@@ -1,7 +1,6 @@
 package de.zonlykroks.impl;
 
-import de.zonlykroks.compiler.annotations.*;
-import de.zonlykroks.test.Main;
+import de.zonlykroks.classfilemixins.annotations.*;
 
 import java.io.OutputStream;
 import java.io.PrintStream;
@@ -42,9 +41,9 @@ public class ExampleMixin implements DummyInterface{
         return 69;
     }
 
-    @TerminateJVM(method = "terminateJVM", target = "java/io/PrintStream.println:(Ljava/lang/String;)V", exitCode = 1)
-    public boolean terminationCondition() {
-        return true;
+    @LookupSwitchCaseAddition(method = "mcSwitch", caseValue = 0,switchIndex = 0)
+    public void wrapMethodInTryCatch() {
+        System.out.println("I am a catch block");
     }
 
     public static class PrintStreamImpl extends PrintStream{

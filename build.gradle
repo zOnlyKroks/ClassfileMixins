@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-group = "de.zonlykroks.compiler"
+group = "de.zonlykroks.classfilemixins"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -45,13 +45,13 @@ tasks.register('moveJarSource', Copy) {
     dependsOn compileSourceModule
     from "SourceModule/build/libs"
     into "target"
-    include "SourceModule-1.0-SNAPSHOT-all.jar"
+    include "SourceModule-all.jar"
 }
 
 tasks.register('runJar', JavaExec) {
     getMainClass().set('-jar')
-    args += ['target/SourceModule-1.0-SNAPSHOT-all.jar']
-    args += ['-j C:/Users/finnr/IdeaProjects/ClassfileMixins/target/']
+    args += ['target/SourceModule-all.jar']
+    args += ['-j C:/Users/finnr/Desktop/ClassfileMixins/target/']
     args += ['-m de.zonlykroks.test.Main']
 }
 
