@@ -3,9 +3,10 @@ package de.zonlykroks.classfilemixins.delegator;
 import de.zonlykroks.classfilemixins.Bootstrap;
 import de.zonlykroks.classfilemixins.Constants;
 import de.zonlykroks.classfilemixins.transformer.ClassFileTransformerImpl;
-import org.glavo.classfile.*;
 
 import java.io.*;
+import java.lang.classfile.ClassFile;
+import java.lang.classfile.ClassModel;
 import java.net.URL;
 import java.nio.file.Files;
 

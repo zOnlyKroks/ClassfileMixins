@@ -2,8 +2,8 @@ package de.zonlykroks.classfilemixins.transformer.processor;
 
 import de.zonlykroks.classfilemixins.annotations.TerminateJVM;
 import de.zonlykroks.classfilemixins.transformer.util.TransformerUtils;
-import org.glavo.classfile.*;
-import org.glavo.classfile.instruction.InvokeInstruction;
+import java.lang.classfile.*;
+import java.lang.classfile.instruction.*;
 
 import java.lang.constant.ClassDesc;
 import java.lang.constant.MethodTypeDesc;
@@ -62,11 +62,11 @@ public class TerminateJVMAnnotationProcessor extends AbstractAnnotationProcessor
 
         codeBuilder.getstatic(ClassDesc.of("java.lang.System"), "out", ClassDesc.of("java.io.PrintStream"));
 
-        codeBuilder.constantInstruction("Termination condition met! Terminating JVM with exit code: " + annotation.exitCode() + "! This was forced by the method: " + sourceMethodModule + " in class: " + sourceClassModule);
+        codeBuilder.loadConstant("Termination condition met! Terminating JVM with exit code: " + annotation.exitCode() + "! This was forced by the method: " + sourceMethodModule + " in class: " + sourceClassModule);
 
         codeBuilder.invokevirtual(ClassDesc.of("java.io.PrintStream"), "println", MethodTypeDesc.ofDescriptor("(Ljava/lang/String;)V"));
 
-        codeBuilder.constantInstruction(annotation.exitCode());
+        codeBuilder.loadConstant(annotation.exitCode());
         codeBuilder.invokestatic(ClassDesc.of("java.lang.System"), "exit", MethodTypeDesc.ofDescriptor("(I)V"));
 
         codeBuilder.labelBinding(stopLabel);

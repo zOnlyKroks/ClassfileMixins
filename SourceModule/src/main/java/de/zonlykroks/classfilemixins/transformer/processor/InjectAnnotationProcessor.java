@@ -3,8 +3,8 @@ package de.zonlykroks.classfilemixins.transformer.processor;
 import de.zonlykroks.classfilemixins.annotations.InjectAnnotation;
 import de.zonlykroks.classfilemixins.annotations.util.InjectSelector;
 import de.zonlykroks.classfilemixins.transformer.util.TransformerUtils;
-import org.glavo.classfile.*;
-import org.glavo.classfile.instruction.*;
+import java.lang.classfile.*;
+import java.lang.classfile.instruction.*;
 
 public class InjectAnnotationProcessor extends AbstractAnnotationProcessor<InjectAnnotation>{
 

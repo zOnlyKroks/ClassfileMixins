@@ -2,8 +2,8 @@ package de.zonlykroks.classfilemixins.transformer.processor;
 
 import de.zonlykroks.classfilemixins.annotations.ModifyGetFieldReference;
 import de.zonlykroks.classfilemixins.transformer.util.TransformerUtils;
-import org.glavo.classfile.*;
-import org.glavo.classfile.instruction.FieldInstruction;
+import java.lang.classfile.*;
+import java.lang.classfile.instruction.*;
 
 public class ModifyGetFieldReferenceAnnotationProcessor extends AbstractAnnotationProcessor<ModifyGetFieldReference>{
 

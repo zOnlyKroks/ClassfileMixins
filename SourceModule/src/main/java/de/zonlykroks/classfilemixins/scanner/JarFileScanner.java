@@ -1,13 +1,14 @@
 package de.zonlykroks.classfilemixins.scanner;
 
 import de.zonlykroks.classfilemixins.scanner.util.MixinAnnotatedClass;
-import org.glavo.classfile.Attributes;
-import org.glavo.classfile.ClassFile;
-import org.glavo.classfile.ClassModel;
-import org.glavo.classfile.attribute.RuntimeVisibleAnnotationsAttribute;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.classfile.AttributeMapper;
+import java.lang.classfile.Attributes;
+import java.lang.classfile.ClassFile;
+import java.lang.classfile.ClassModel;
+import java.lang.classfile.attribute.RuntimeVisibleAnnotationsAttribute;
 import java.net.URLClassLoader;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -79,8 +80,8 @@ public class JarFileScanner {
 
         ClassModel classModel = ClassFile.of().parse(classBytes);
 
-        if(classModel.findAttribute(Attributes.RUNTIME_VISIBLE_ANNOTATIONS).isPresent()) {
-            RuntimeVisibleAnnotationsAttribute attribute = classModel.findAttribute(Attributes.RUNTIME_VISIBLE_ANNOTATIONS).get();
+        if(classModel.findAttribute(Attributes.runtimeVisibleAnnotations()).isPresent()) {
+            RuntimeVisibleAnnotationsAttribute attribute = classModel.findAttribute(Attributes.runtimeVisibleAnnotations()).get();
 
             return attribute.annotations().stream().anyMatch(annotation -> annotation.className().stringValue().equalsIgnoreCase("Lde/zonlykroks/classfilemixins/annotations/Mixin;"));
         }

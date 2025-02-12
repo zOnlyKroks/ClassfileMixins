@@ -1,10 +1,10 @@
 package de.zonlykroks.classfilemixins.transformer.util;
 
-import org.glavo.classfile.*;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.lang.classfile.*;
 import java.lang.constant.ClassDesc;
+import java.lang.reflect.AccessFlag;
 import java.util.Map;
 
 public class TransformerUtils {
@@ -38,7 +38,7 @@ public class TransformerUtils {
                 case FloatType -> builder.fload(entry.getKey());
                 case DoubleType -> builder.dload(entry.getKey());
                 case ReferenceType -> builder.aload(entry.getKey());
-                default -> builder.loadInstruction(entry.getValue(), entry.getKey());
+                default -> builder.loadLocal(entry.getValue(), entry.getKey());
             }
         }
 

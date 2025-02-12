@@ -2,8 +2,8 @@ package de.zonlykroks.classfilemixins.transformer.processor;
 
 import de.zonlykroks.classfilemixins.annotations.Overwrite;
 import de.zonlykroks.classfilemixins.transformer.util.TransformerUtils;
-import org.glavo.classfile.*;
-import org.glavo.classfile.instruction.ReturnInstruction;
+import java.lang.classfile.*;
+import java.lang.classfile.instruction.*;
 
 public class OverwriteAnnotationProcessor extends AbstractAnnotationProcessor<Overwrite>{
 
@@ -24,7 +24,7 @@ public class OverwriteAnnotationProcessor extends AbstractAnnotationProcessor<Ov
             public void atEnd(CodeBuilder builder) {
                 TransformerUtils.invokeVirtualSourceMethod(builder, targetModel, sourceMethodModule);
 
-                builder.returnInstruction(returnKind);
+                builder.return_(returnKind);
             }
         }));
 

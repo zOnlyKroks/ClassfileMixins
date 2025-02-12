@@ -2,9 +2,8 @@ package de.zonlykroks.classfilemixins.transformer.processor;
 
 import de.zonlykroks.classfilemixins.annotations.LookupSwitchCaseAddition;
 import de.zonlykroks.classfilemixins.transformer.util.TransformerUtils;
-import org.glavo.classfile.*;
-import org.glavo.classfile.instruction.LookupSwitchInstruction;
-import org.glavo.classfile.instruction.SwitchCase;
+import java.lang.classfile.*;
+import java.lang.classfile.instruction.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +33,7 @@ public class LookupSwitchCaseAdditionProcessor extends AbstractAnnotationProcess
                         Label newCaseLabel = codeBuilder.newLabel();
                         updatedCases.add(SwitchCase.of(annotation.caseValue(), newCaseLabel));
 
-                        codeBuilder.lookupSwitchInstruction(
+                        codeBuilder.lookupswitch(
                                 lookupSwitchInstruction.defaultTarget(),
                                 updatedCases
                         );

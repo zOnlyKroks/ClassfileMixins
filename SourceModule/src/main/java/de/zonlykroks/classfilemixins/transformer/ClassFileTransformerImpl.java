@@ -5,12 +5,12 @@ import de.zonlykroks.classfilemixins.annotations.*;
 import de.zonlykroks.classfilemixins.scanner.util.MixinAnnotatedClass;
 import de.zonlykroks.classfilemixins.transformer.processor.*;
 import de.zonlykroks.classfilemixins.transformer.util.TransformerUtils;
-import org.glavo.classfile.*;
-import org.glavo.classfile.constantpool.ClassEntry;
-import org.glavo.classfile.instruction.InvokeInstruction;
-import org.glavo.classfile.instruction.ReturnInstruction;
 
 import java.lang.annotation.Annotation;
+import java.lang.classfile.*;
+import java.lang.classfile.constantpool.ClassEntry;
+import java.lang.classfile.instruction.InvokeInstruction;
+import java.lang.classfile.instruction.ReturnInstruction;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.ArrayList;
@@ -133,7 +133,7 @@ public class ClassFileTransformerImpl {
             return targetConstructorModel;
         }
 
-        return parse( transform(targetConstructorModel, TransformerUtils.getTransformingMethodBodies("<init>", (codeBuilder, codeElement) -> {
+        return parse(transform(targetConstructorModel, TransformerUtils.getTransformingMethodBodies("<init>", (codeBuilder, codeElement) -> {
             if(codeElement instanceof InvokeInstruction invokeInstruction) {
                 if(invokeInstruction.opcode() == Opcode.INVOKESPECIAL) {
                     return;

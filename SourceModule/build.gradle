@@ -12,16 +12,19 @@ application {
     mainClassName = 'de.zonlykroks.classfilemixins.Entrypoint'
 }
 
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs += "--enable-preview"
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation("org.glavo:classfile:0.5.0")
-    implementation("org.json:json:20240303")
-    implementation("commons-cli:commons-cli:1.7.0")
-    implementation 'com.google.code.findbugs:jsr305:3.0.2'
-    implementation("org.apache.commons:commons-lang3:3.14.0")
+    implementation 'org.json:json:20250107'
+    implementation("commons-cli:commons-cli:1.9.0")
+    implementation 'com.github.spotbugs:spotbugs-annotations:4.8.6'
+    implementation("org.apache.commons:commons-lang3:3.17.0")
 }
 
 jar {

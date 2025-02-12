@@ -2,8 +2,8 @@ package de.zonlykroks.classfilemixins.transformer.processor;
 
 import de.zonlykroks.classfilemixins.annotations.ModifyStoreInstruction;
 import de.zonlykroks.classfilemixins.transformer.util.TransformerUtils;
-import org.glavo.classfile.*;
-import org.glavo.classfile.instruction.StoreInstruction;
+import java.lang.classfile.*;
+import java.lang.classfile.instruction.*;
 
 public class ModifyStoreInstructionProcessor extends AbstractAnnotationProcessor<ModifyStoreInstruction>{
     @Override
@@ -19,7 +19,7 @@ public class ModifyStoreInstructionProcessor extends AbstractAnnotationProcessor
                         if(currentIsnIndex == annotation.staticIsnIndex()) {
                             TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, annotation.captureLocals() ? localVariables : null);
 
-                            codeBuilder.storeInstruction(storeInstruction.typeKind(), storeInstruction.slot());
+                            codeBuilder.storeLocal(storeInstruction.typeKind(), storeInstruction.slot());
                         }else {
                             codeBuilder.with(codeElement);
                         }

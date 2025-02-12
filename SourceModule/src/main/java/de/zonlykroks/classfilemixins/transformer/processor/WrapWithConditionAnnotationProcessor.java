@@ -2,11 +2,8 @@ package de.zonlykroks.classfilemixins.transformer.processor;
 
 import de.zonlykroks.classfilemixins.annotations.WrapWithCondition;
 import de.zonlykroks.classfilemixins.transformer.util.TransformerUtils;
-import org.glavo.classfile.*;
-import org.glavo.classfile.instruction.ConstantInstruction;
-import org.glavo.classfile.instruction.InvokeInstruction;
-import org.glavo.classfile.instruction.LoadInstruction;
-import org.glavo.classfile.instruction.StoreInstruction;
+import java.lang.classfile.*;
+import java.lang.classfile.instruction.*;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -2,8 +2,8 @@ package de.zonlykroks.classfilemixins.transformer.processor;
 
 import de.zonlykroks.classfilemixins.annotations.ModifyLoadInstruction;
 import de.zonlykroks.classfilemixins.transformer.util.TransformerUtils;
-import org.glavo.classfile.*;
-import org.glavo.classfile.instruction.LoadInstruction;
+import java.lang.classfile.*;
+import java.lang.classfile.instruction.*;
 
 
 public class ModifyLoadAnnotationProcessor extends AbstractAnnotationProcessor<ModifyLoadInstruction> {
@@ -23,9 +23,9 @@ public class ModifyLoadAnnotationProcessor extends AbstractAnnotationProcessor<M
 
                             TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, annotation.captureLocals() ? localVariables : null);
 
-                            codeBuilder.storeInstruction(loadInstruction.typeKind(), slot);
+                            codeBuilder.storeLocal(loadInstruction.typeKind(), slot);
 
-                            codeBuilder.loadInstruction(loadInstruction.typeKind(), slot);
+                            codeBuilder.loadLocal(loadInstruction.typeKind(), slot);
                         }else {
                             codeBuilder.with(codeElement);
                         }

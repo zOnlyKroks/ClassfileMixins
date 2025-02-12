@@ -49,9 +49,10 @@ tasks.register('moveJarSource', Copy) {
 }
 
 tasks.register('runJar', JavaExec) {
+    jvmArgs += ["--enable-preview"]
     getMainClass().set('-jar')
     args += ['target/SourceModule-all.jar']
-    args += ['-j C:/Users/finnr/Desktop/ClassfileMixins/target/']
+    args += ['-j /Users/finnrades/Documents/Git/Private/ClassfileMixins/target/']
     args += ['-m de.zonlykroks.test.Main']
 }
 

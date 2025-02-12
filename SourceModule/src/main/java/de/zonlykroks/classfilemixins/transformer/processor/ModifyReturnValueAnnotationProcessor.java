@@ -2,8 +2,8 @@ package de.zonlykroks.classfilemixins.transformer.processor;
 
 import de.zonlykroks.classfilemixins.annotations.ModifyReturnValue;
 import de.zonlykroks.classfilemixins.transformer.util.TransformerUtils;
-import org.glavo.classfile.*;
-import org.glavo.classfile.instruction.ReturnInstruction;
+import java.lang.classfile.*;
+import java.lang.classfile.instruction.*;
 
 public class ModifyReturnValueAnnotationProcessor extends AbstractAnnotationProcessor<ModifyReturnValue>{
 
@@ -22,7 +22,7 @@ public class ModifyReturnValueAnnotationProcessor extends AbstractAnnotationProc
 
                         TransformerUtils.invokeVirtualSourceMethod(codeBuilder, targetModel, sourceMethodModule, modifyReturnValue.captureLocals() ? localVariables : null);
 
-                        codeBuilder.returnInstruction(returnInstruction.typeKind());
+                        codeBuilder.return_(returnInstruction.typeKind());
                     } else {
                         codeBuilder.with(codeElement);
                     }

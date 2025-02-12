@@ -2,8 +2,8 @@ package de.zonlykroks.classfilemixins.transformer.processor;
 
 import de.zonlykroks.classfilemixins.annotations.ModifyConstant;
 import de.zonlykroks.classfilemixins.transformer.util.TransformerUtils;
-import org.glavo.classfile.*;
-import org.glavo.classfile.instruction.ConstantInstruction;
+import java.lang.classfile.*;
+import java.lang.classfile.instruction.*;
 
 public class ModifyConstantAnnotationProcessor extends AbstractAnnotationProcessor<ModifyConstant> {
 
