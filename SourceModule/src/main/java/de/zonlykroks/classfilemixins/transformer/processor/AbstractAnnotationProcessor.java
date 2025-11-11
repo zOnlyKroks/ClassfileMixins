@@ -22,7 +22,7 @@ public abstract class AbstractAnnotationProcessor<T extends Annotation> {
     }
 
     protected byte[] transform(ClassModel targetModel, ClassTransform classTransform) {
-        return classFile.transform(targetModel,classTransform);
+        return classFile.transformClass(targetModel,classTransform);
     }
 
     protected ClassModel parse(byte[] modified) {
@@ -34,9 +34,9 @@ public abstract class AbstractAnnotationProcessor<T extends Annotation> {
             localVariables.put(loadInstruction.slot(), loadInstruction.typeKind());
         }else if(codeElement instanceof StoreInstruction storeInstruction) {
             localVariables.put(storeInstruction.slot(), storeInstruction.typeKind());
-        }else if(codeElement instanceof ConstantInstruction constantInstruction) {
-            localVariables.put(constantInstruction.opcode().slot(), constantInstruction.typeKind());
         }
+
+        //TODO: Constant Instruction
 
         //Remove top of local variable stack
         localVariables.remove(-1);

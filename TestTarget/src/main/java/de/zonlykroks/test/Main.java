@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Static block that was already there");
     }
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         System.out.println("Hello World!");
         Main main = new Main();
 

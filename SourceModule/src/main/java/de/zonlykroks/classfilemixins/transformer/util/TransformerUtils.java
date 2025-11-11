@@ -33,11 +33,11 @@ public class TransformerUtils {
 
         for (Map.Entry<Integer, TypeKind> entry : localVariables.entrySet()) {
             switch (entry.getValue()) {
-                case IntType -> builder.iload(entry.getKey());
-                case LongType -> builder.lload(entry.getKey());
-                case FloatType -> builder.fload(entry.getKey());
-                case DoubleType -> builder.dload(entry.getKey());
-                case ReferenceType -> builder.aload(entry.getKey());
+                case INT -> builder.iload(entry.getKey());
+                case LONG -> builder.lload(entry.getKey());
+                case FLOAT -> builder.fload(entry.getKey());
+                case DOUBLE -> builder.dload(entry.getKey());
+                case REFERENCE -> builder.aload(entry.getKey());
                 default -> builder.loadLocal(entry.getValue(), entry.getKey());
             }
         }

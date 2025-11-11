@@ -24,7 +24,7 @@ public class ClassFileTransformerImpl {
     private final ClassFile classFile = ClassFile.of();
 
     private byte[] transform(ClassModel targetModel, ClassTransform transform) {
-        return classFile.transform(targetModel,transform);
+        return classFile.transformClass(targetModel,transform);
     }
 
     private ClassModel parse(byte[] bytes) {
@@ -188,7 +188,7 @@ public class ClassFileTransformerImpl {
 
     private void handleMergeConstructor(CodeBuilder codeBuilder, CodeElement codeElement, MethodModel constructorModel) {
         if(codeElement instanceof ReturnInstruction returnInstruction) {
-            if (returnInstruction.typeKind() == TypeKind.VoidType) {
+            if (returnInstruction.typeKind() == TypeKind.VOID) {
                 if(constructorModel.code().isEmpty()) {
                     codeBuilder.nop();
                 }else {

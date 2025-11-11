@@ -1,5 +1,5 @@
 plugins {
-    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'com.gradleup.shadow' version '9.2.2'
     id 'java'
     id 'application'
 }
@@ -9,7 +9,7 @@ var id = "classfilemixins"
 var ver = "0.1-SNAPSHOT"
 
 application {
-    mainClassName = 'de.zonlykroks.classfilemixins.Entrypoint'
+    mainClass = 'de.zonlykroks.classfilemixins.Entrypoint'
 }
 
 tasks.withType(JavaCompile).configureEach {

@@ -16,7 +16,6 @@ public class LookupSwitchCaseAdditionProcessor extends AbstractAnnotationProcess
 
             @Override
             public void accept(CodeBuilder codeBuilder, CodeElement codeElement) {
-                System.out.println(codeElement);
                 if (codeElement instanceof LookupSwitchInstruction lookupSwitchInstruction) {
                     List<SwitchCase> cases = new ArrayList<>();
                     if (currentSwitchIndex == annotation.switchIndex()) {
